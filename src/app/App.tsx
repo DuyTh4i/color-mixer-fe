@@ -703,7 +703,7 @@ export default function App() {
             </div>
 
             {/* Footer controls: Dark mode */}
-            <div className="border-t border-border shrink-0 flex items-center justify-center py-2.5 bg-background/50">
+            <div className="border-t border-border shrink-0 flex items-center justify-center px-4 py-2.5 bg-background/50 relative">
               <button onClick={() => setIsDarkMode(prev => !prev)} className="relative rounded-full transition-colors duration-300"
                 style={{ width: 44, height: 24, background: isDarkMode ? "#3a3a42" : "#ff0052", border: "none", cursor: "pointer" }}>
                 <div className="absolute top-1/2 -translate-y-1/2 rounded-full flex items-center justify-center transition-all duration-300"
@@ -711,6 +711,7 @@ export default function App() {
                   {isDarkMode ? <Moon style={{ width: 10, height: 10, color: "#5a5a66" }} /> : <Sun style={{ width: 10, height: 10, color: "#ff0052" }} />}
                 </div>
               </button>
+              <span className="absolute right-4 text-foreground/40 text-xs font-medium select-none">thaidd@gmail.com</span>
             </div>
           </div>
         </div>
@@ -934,7 +935,7 @@ export default function App() {
                 </div>
               )}
             </div>
-            <div className="border-t border-border shrink-0 flex items-center justify-center" style={{ padding: "clamp(6px, 0.52vw, 10px) clamp(10px, 0.83vw, 16px)" }}>
+            <div className="border-t border-border shrink-0 flex items-center justify-center relative" style={{ padding: "clamp(6px, 0.52vw, 10px) clamp(10px, 0.83vw, 16px)" }}>
               <button onClick={() => setIsDarkMode(prev => !prev)} className="relative rounded-full transition-colors duration-300"
                 style={{ width: "clamp(40px, 3.12vw, 56px)", height: "clamp(22px, 1.72vw, 30px)", background: isDarkMode ? "#3a3a42" : "#ff0052", border: "none", cursor: "pointer" }}>
                 <div className="absolute top-1/2 -translate-y-1/2 rounded-full flex items-center justify-center transition-all duration-300"
@@ -942,6 +943,7 @@ export default function App() {
                   {isDarkMode ? <Moon style={{ width: "clamp(9px, 0.68vw, 13px)", height: "clamp(9px, 0.68vw, 13px)", color: "#5a5a66" }} /> : <Sun style={{ width: "clamp(9px, 0.68vw, 13px)", height: "clamp(9px, 0.68vw, 13px)", color: "#ff0052" }} />}
                 </div>
               </button>
+              <span className="absolute right-4 text-foreground/40 select-none" style={{ fontSize: "clamp(11px, 0.68vw, 14px)" }}>thaidd@gmail.com</span>
             </div>
           </aside>
         </div>
