@@ -7,6 +7,7 @@ interface Subcollection {
   id: string;
   name: string;
   product_img: string;
+  colors: { count: number }[];
 }
 
 interface Brand {
@@ -529,7 +530,14 @@ export default function App() {
                         }}
                       />
                     )}
-                    {sub.name}
+                    <div className="flex flex-col items-start leading-tight">
+                      <span>{sub.name}</span>
+                      {sub.colors?.[0]?.count != null && (
+                        <span className="text-foreground/30" style={{ fontSize: "1.2em" }}>
+                          ({sub.colors[0].count})
+                        </span>
+                      )}
+                    </div>
                   </button>
                 );
               })}
@@ -620,8 +628,14 @@ export default function App() {
                         }}
                       />
                     )}
-                    {checked ? "✓ " : ""}
-                    {sub.name}
+                    <div className="flex flex-col items-start leading-tight">
+                      <span>{sub.name}</span>
+                      {sub.colors?.[0]?.count != null && (
+                        <span className="text-foreground/30" style={{ fontSize: "1.2em" }}>
+                          ({sub.colors[0].count})
+                        </span>
+                      )}
+                    </div>
                   </button>
                 );
               })}
