@@ -263,25 +263,31 @@ export default function App() {
     return { cx, cy };
   };
 
-  const pickColorFromClientCoords = (clientX: number, clientY: number) => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+  const pickColorFromClient = (clientX: number, clientY: number) => {
+    const canvas = canvasRef.current, img = imgRef.current;
+    if (!canvas || !img) return;
     const rect = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / rect.width;
-    const scaleY = canvas.height / rect.height;
-    const cx = (clientX - rect.left) * scaleX;
-    const cy = (clientY - rect.top) * scaleY;
     
-    const ix = Math.floor(cx);
-    const iy = Math.floor(cy);
-    if (ix < 0 || iy < 0 || ix >= canvas.width || iy >= canvas.height) return;
+    const relX = (clientX - rect.left) / rect.width;
+    const relY = (clientY - rect.top) / rect.height;
     
-    const ctx = canvas.getContext("2d");
+    const imgX = Math.floor(relX * img.naturalWidth);
+    const imgY = Math.floor(relY * img.naturalHeight);
+    
+    if (imgX < 0 || imgY < 0 || imgX >= img.naturalWidth || imgY >= img.naturalHeight) return;
+    
+    const offscreen = document.createElement("canvas");
+    offscreen.width = 1;
+    offscreen.height = 1;
+    const ctx = offscreen.getContext("2d");
     if (!ctx) return;
-    const px = ctx.getImageData(ix, iy, 1, 1).data;
+    
+    ctx.drawImage(img, imgX, imgY, 1, 1, 0, 0, 1, 1);
+    const px = ctx.getImageData(0, 0, 1, 1).data;
     const [pixR, pixG, pixB] = [px[0], px[1], px[2]];
+    
     setSelectedColor({ r: pixR, g: pixG, b: pixB, hex: rgbToHex(pixR, pixG, pixB) });
-    setSelectedPixel({ x: ix / zoomRef.current, y: iy / zoomRef.current });
+    setSelectedPixel({ x: imgX, y: imgY });
     
     const ratios = computeMixRatios(pixR, pixG, pixB);
     setSliderValues({
@@ -292,26 +298,12 @@ export default function App() {
     });
   };
 
+  const pickColorFromClientCoords = (clientX: number, clientY: number) => {
+    pickColorFromClient(clientX, clientY);
+  };
+
   const handleCanvasClick = (e: React.MouseEvent<HTMLCanvasElement>) => {
-    const pos = getCanvasXY(e);
-    if (!pos) return;
-    const canvas = canvasRef.current!;
-    const ctx = canvas.getContext("2d")!;
-    const ix = Math.floor(pos.cx);
-    const iy = Math.floor(pos.cy);
-    const pw = canvas.width, ph = canvas.height;
-    if (ix < 0 || iy < 0 || ix >= pw || iy >= ph) return;
-    const px = ctx.getImageData(ix, iy, 1, 1).data;
-    const [pixR, pixG, pixB] = [px[0], px[1], px[2]];
-    setSelectedColor({ r: pixR, g: pixG, b: pixB, hex: rgbToHex(pixR, pixG, pixB) });
-    setSelectedPixel({ x: ix / zoomRef.current, y: iy / zoomRef.current });
-    const ratios = computeMixRatios(pixR, pixG, pixB);
-    setSliderValues({
-      white:  Math.round((ratios.white  ?? 0) * SLIDER_MAX),
-      red:    Math.round((ratios.red    ?? 0) * SLIDER_MAX),
-      yellow: Math.round((ratios.yellow ?? 0) * SLIDER_MAX),
-      black:  Math.round((ratios.black  ?? 0) * SLIDER_MAX),
-    });
+    pickColorFromClient(e.clientX, e.clientY);
   };
 
   const handleCanvasMouseDown = (e: React.MouseEvent<HTMLCanvasElement>) => {
