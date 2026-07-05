@@ -612,7 +612,7 @@ export default function App() {
                   return (
                     <div key={brand} className="space-y-1">
                       <div className="flex items-center justify-between mb-1">
-                        <label className="block text-foreground/60 text-[10px] font-bold tracking-wider uppercase">{brand} · Dòng màu</label>
+                        <label className="block text-foreground/60 text-[10px] font-bold tracking-wider uppercase">Dòng màu</label>
                         <button 
                           onClick={() => { setSelectedSubCollections(prev => ({ ...prev, [brand]: allSelected ? new Set<string>() : new Set(subs) })); }}
                           style={{ fontSize: "10px", color: "var(--color-foreground)", opacity: 0.5, cursor: "pointer", background: "none", border: "none", padding: 0 }}
@@ -824,7 +824,7 @@ export default function App() {
                   return (
                     <div key={brand}>
                       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: labelMb }}>
-                        <label className="block text-foreground/60" style={{ fontSize: labelFs }}>{brand} · DÒNG MÀU</label>
+                        <label className="block text-foreground/60" style={{ fontSize: labelFs }}>DÒNG MÀU</label>
                         <button onClick={() => { setSelectedSubCollections(prev => ({ ...prev, [brand]: allSelected ? new Set<string>() : new Set(subs) })); }}
                           style={{ fontSize: "clamp(9px, 0.47vw, 10px)", color: "var(--color-foreground)", opacity: 0.5, cursor: "pointer", background: "none", border: "none", padding: 0 }}>
                           {allSelected ? "Deselect all" : "Select all"}
