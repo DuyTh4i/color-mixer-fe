@@ -127,6 +127,10 @@ export default function App() {
   const panRef       = useRef({ x: 0, y: 0 });
   const isPanning    = useRef(false);
   const lastMouse    = useRef({ x: 0, y: 0 });
+  const touchStartDist = useRef(1);
+  const touchStartPan  = useRef({ x: 0, y: 0 });
+  const touchStartMid  = useRef({ x: 0, y: 0 });
+  const touchStartZoom = useRef(1);
 
   const hasColor = selectedColor !== null;
   const mixResultHex = hasColor ? computeMixColor(sliderValues) : null;
@@ -492,12 +496,46 @@ export default function App() {
                     if (e.touches.length === 1) {
                       e.preventDefault();
                       pickColorFromClientCoords(e.touches[0].clientX, e.touches[0].clientY);
+                    } else if (e.touches.length === 2) {
+                      e.preventDefault();
+                      const dist = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                      );
+                      const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+                      const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+                      touchStartDist.current = dist || 1;
+                      touchStartPan.current = { ...panRef.current };
+                      touchStartMid.current = { x: midX, y: midY };
+                      touchStartZoom.current = zoomRef.current;
                     }
                   }}
                   onTouchMove={(e) => {
                     if (e.touches.length === 1) {
                       e.preventDefault();
                       pickColorFromClientCoords(e.touches[0].clientX, e.touches[0].clientY);
+                    } else if (e.touches.length === 2) {
+                      e.preventDefault();
+                      const dist = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                      );
+                      const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+                      const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+                      
+                      const scale = dist / touchStartDist.current;
+                      const nextZoom = Math.min(Math.max(touchStartZoom.current * scale, 0.4), 3.0);
+                      zoomRef.current = nextZoom;
+                      setZoom(nextZoom);
+                      
+                      const dx = midX - touchStartMid.current.x;
+                      const dy = midY - touchStartMid.current.y;
+                      const nextPan = { x: touchStartPan.current.x + dx, y: touchStartPan.current.y + dy };
+                      panRef.current = nextPan;
+                      setPan(nextPan);
+                      if (canvasRef.current) {
+                        canvasRef.current.style.transform = `translate(${nextPan.x}px, ${nextPan.y}px)`;
+                      }
                     }
                   }}
                   className="block"
