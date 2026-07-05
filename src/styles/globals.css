@@ -1,0 +1,41 @@
+/* ─── Mobile-specific styles ─── */
+@media (max-width: 768px) {
+  html, body {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Lock to portrait warning overlay */
+.landscape-lock-warning {
+  display: none;
+}
+
+@media (max-width: 932px) and (orientation: landscape) {
+  .landscape-lock-warning {
+    display: flex !important;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: var(--background);
+    color: var(--foreground);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    user-select: none;
+  }
+  .app-container {
+    display: none !important;
+  }
+}
+
