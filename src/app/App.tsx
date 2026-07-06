@@ -18,6 +18,40 @@ interface Brand {
   subcollections: Subcollection[];
 }
 
+interface SuggestColor {
+  id: string;
+  color_name: string;
+  hex_value: string;
+  subcollections: {
+    product_img: string;
+    brands?: {
+      id: string;
+      logo: string;
+    };
+  };
+}
+
+interface Recipe {
+  id: string;
+  color_name: string;
+  hex_value: string;
+  subcollections: {
+    product_img: string;
+    brands?: {
+      id: string;
+      logo: string;
+    };
+  };
+  rate: number;
+}
+
+interface RecipeResponse {
+  result_hex?: string;
+  suggest_colors: SuggestColor[];
+  recipes: Recipe[];
+  match_results: number;
+}
+
 // ─── API base URL from env ───
 const API_BASE =
   import.meta.env.VITE_API_PROD_URL ||
@@ -58,7 +92,7 @@ export default function App() {
   const [selectedSubIds, setSelectedSubIds] = useState<Set<string>>(new Set());
 
   // ─── Recipe state ───
-  const [recipeResult, setRecipeResult] = useState<any>(null);
+  const [recipeResult, setRecipeResult] = useState<RecipeResponse | null>(null);
   const [recipeLoading, setRecipeLoading] = useState(false);
 
   // ─── UI state ───
@@ -119,7 +153,6 @@ export default function App() {
       setRecipeResult(null);
       return;
     }
-    // Chụp giá trị để TypeScript biết chắc không null bên trong async closure
     const color = debouncedColor;
     const subIds = Array.from(selectedSubIds);
     let cancelled = false;
@@ -440,8 +473,16 @@ export default function App() {
   const uploadTitleFs = "clamp(14px, 0.9vw, 17px)";
   const uploadSubFs = "clamp(13px, 0.68vw, 15px)";
 
-  const mixResultHex = recipeResult?.mix_hex ?? null;
-  const mixTextColor = mixResultHex && getLuminance(mixResultHex) > 0.35 ? "#111113" : "#f0f0f4";
+  const mixResultHex = recipeResult?.result_hex || null;
+  const mixTextColor = mixResultHex
+    ? getLuminance(mixResultHex) > 0.35
+      ? "#111113"
+      : "#f0f0f4"
+    : "var(--color-foreground)";
+
+  const matchPercent = recipeResult?.match_results != null
+    ? `${Math.round(recipeResult.match_results * 100)}%`
+    : null;
 
   // ─── Desktop brand section ───
   const renderBrandSection = () => (
@@ -653,6 +694,201 @@ export default function App() {
     </div>
   );
 
+  // ─── Shared suggest colors card renderer ───
+  const renderSuggestColors = () => {
+    if (!recipeResult?.suggest_colors || recipeResult.suggest_colors.length === 0) {
+      return (
+        <div className="w-full flex items-center justify-center py-6">
+          <span className="text-foreground/35 text-xs font-bold uppercase tracking-wider">Chưa có màu đề xuất</span>
+        </div>
+      );
+    }
+    return (
+      <div style={{ display: "flex", flexDirection: "column", gap: "clamp(10px, 0.84vw, 14px)" }}>
+        {recipeResult.suggest_colors.map((sc) => (
+          <div
+            key={sc.id || sc.hex_value}
+            className="flex items-center gap-3 rounded-xl border border-foreground/[0.08] transition-colors duration-200 hover:border-foreground/[0.16]"
+            style={{
+              padding: "clamp(10px, 0.78vw, 14px)",
+              background: "var(--ingredient-card)",
+            }}
+          >
+            <div
+              className="rounded-lg shrink-0"
+              style={{
+                width: "clamp(52px, 4.3vw, 70px)",
+                height: "clamp(52px, 4.3vw, 70px)",
+                background: sc.hex_value,
+                border: "1px solid rgba(255,255,255,0.12)",
+                boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+              }}
+            />
+            <div className="flex flex-col gap-1 min-w-0 flex-1">
+              <div className="flex items-center gap-1.5 min-w-0">
+                <span
+                  className="text-foreground/75 shrink-0 font-mono font-semibold tracking-tight"
+                  style={{ fontSize: "clamp(13px, 0.7vw, 15px)" }}
+                >
+                  {sc.id || "—"}
+                </span>
+                <span className="text-foreground/30 shrink-0 font-semibold" style={{ fontSize: "clamp(13px, 0.7vw, 15px)" }}>
+                  |
+                </span>
+                <span
+                  className="text-foreground/80 font-semibold truncate"
+                  style={{ fontSize: "clamp(13px, 0.7vw, 15px)" }}
+                >
+                  {sc.color_name || "Không tên"}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                {sc.subcollections?.product_img && (
+                  <img
+                    src={sc.subcollections.product_img}
+                    alt="product"
+                    className="rounded object-cover shrink-0"
+                    style={{
+                      width: "clamp(31px, 2.4vw, 43px)",
+                      height: "clamp(31px, 2.4vw, 43px)",
+                      border: "1px solid var(--border)",
+                    }}
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  // ─── Shared recipes card renderer ───
+  const renderRecipes = () => {
+    if (!recipeResult?.recipes || recipeResult.recipes.length === 0) {
+      return (
+        <div className="w-full flex items-center justify-center py-6">
+          <span className="text-foreground/35 text-xs font-bold uppercase tracking-wider">Chưa có công thức</span>
+        </div>
+      );
+    }
+    return (
+      <div style={{ display: "flex", flexDirection: "column", gap: "clamp(10px, 0.84vw, 14px)" }}>
+        {recipeResult.recipes.map((rcp, idx) => {
+          const rateLevel = Math.round(rcp.rate ?? 0);
+          const textColor = getLuminance(rcp.hex_value) > 0.35 ? "#111113" : "#f0f0f4";
+          return (
+            <div
+              key={rcp.id || `recipe-${idx}`}
+              className="rounded-xl border border-foreground/[0.08] overflow-hidden transition-colors duration-200 hover:border-foreground/[0.16]"
+            >
+              {/* Nửa trên: màu hex làm nền */}
+              <div
+                style={{
+                  background: rcp.hex_value,
+                  padding: "clamp(8px, 0.65vw, 12px)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "clamp(8px, 0.6vw, 10px)",
+                  minHeight: "clamp(52px, 4.5vw, 68px)",
+                }}
+              >
+                {/* Logo brand (nếu có) */}
+                {rcp.subcollections?.brands?.logo && (
+                  <img
+                    src={rcp.subcollections.brands.logo}
+                    alt="brand"
+                    className="rounded object-cover shrink-0"
+                    style={{
+                      width: "clamp(34px, 2.64vw, 46px)",
+                      height: "clamp(34px, 2.64vw, 46px)",
+                      border: "1px solid rgba(255,255,255,0.2)",
+                    }}
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                )}
+                {/* Product img */}
+                {rcp.subcollections?.product_img && (
+                  <img
+                    src={rcp.subcollections.product_img}
+                    alt="product"
+                    className="rounded object-cover shrink-0"
+                    style={{
+                      width: "clamp(34px, 2.64vw, 46px)",
+                      height: "clamp(34px, 2.64vw, 46px)",
+                      border: "1px solid rgba(255,255,255,0.2)",
+                    }}
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                )}
+                {/* id màu | tên màu */}
+                <div className="flex items-center gap-1.5 min-w-0 flex-1">
+                  <span
+                    className="shrink-0 font-semibold"
+                    style={{ fontSize: "clamp(14px, 0.78vw, 17px)", color: textColor }}
+                  >
+                    {rcp.id || "—"}
+                  </span>
+                  <span style={{ fontSize: "clamp(14px, 0.78vw, 17px)", color: textColor, opacity: 0.5 }}>
+                    |
+                  </span>
+                  <span
+                    className="font-semibold truncate"
+                    style={{ fontSize: "clamp(14px, 0.78vw, 17px)", color: textColor }}
+                  >
+                    {rcp.color_name || "Không tên"}
+                  </span>
+                </div>
+              </div>
+              {/* Nửa dưới: range slider 1-10, màu trùng hex của card */}
+              <div
+                style={{
+                  background: "var(--ingredient-card)",
+                  padding: "clamp(6px, 0.5vw, 10px) clamp(10px, 0.78vw, 14px)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "clamp(8px, 0.6vw, 10px)",
+                }}
+              >
+                <input
+                  type="range"
+                  min={1}
+                  max={10}
+                  step={1}
+                  value={rateLevel}
+                  readOnly
+                  style={{
+                    flex: 1,
+                    height: "clamp(6px, 0.5vw, 8px)",
+                    appearance: "none",
+                    WebkitAppearance: "none",
+                    background: `linear-gradient(to right, ${rcp.hex_value} 0%, ${rcp.hex_value} ${(rateLevel - 1) * 11.111}%, var(--border) ${(rateLevel - 1) * 11.111}%, var(--border) 100%)`,
+                    borderRadius: "999px",
+                    outline: "none",
+                    cursor: "default",
+                  }}
+                />
+                <span
+                  className="shrink-0 font-mono font-semibold tabular-nums"
+                  style={{ fontSize: "clamp(16px, 0.9vw, 18px)", color: "var(--color-foreground)", minWidth: "1.5em", textAlign: "right" }}
+                >
+                  {rateLevel}
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
   // ─── Mobile portrait layout ───
   if (isMobile) {
     return (
@@ -792,8 +1028,16 @@ export default function App() {
                       style={{ gap: mixGap, padding: `${mixPt} ${mixPt} 0 ${mixPt}` }}
                     >
                       <span className="font-medium" style={{ color: mixTextColor, opacity: 0.65, fontSize: mixFs }}>
-                        {recipeLoading ? "Đang tìm..." : "Mix Result"}
+                        Mix Result
                       </span>
+                      {!recipeLoading && recipeResult && matchPercent && (
+                        <span
+                          className="font-mono font-semibold shrink-0"
+                          style={{ color: mixTextColor, opacity: 0.85, fontSize: mixFs }}
+                        >
+                          {matchPercent}
+                        </span>
+                      )}
                     </div>
                   )}
                 </div>
@@ -846,13 +1090,13 @@ export default function App() {
               </div>
 
               {activeTab === "suggested" ? (
-                <div className="flex items-center justify-center py-8">
+                <div>
                   {recipeLoading ? (
-                    <span className="text-foreground/40 text-sm">Đang tải...</span>
+                    <div className="flex items-center justify-center py-8">
+                      <span className="text-foreground/40 text-sm">Đang tải...</span>
+                    </div>
                   ) : recipeResult ? (
-                    <pre className="text-foreground/70 text-sm whitespace-pre-wrap">
-                      {JSON.stringify(recipeResult, null, 2)}
-                    </pre>
+                    renderSuggestColors()
                   ) : (
                     <div />
                   )}
@@ -862,9 +1106,7 @@ export default function App() {
                   {recipeLoading ? (
                     <div className="text-foreground/40 text-sm text-center py-4">Đang tính công thức...</div>
                   ) : recipeResult ? (
-                    <pre className="text-foreground/70 text-sm whitespace-pre-wrap">
-                      {JSON.stringify(recipeResult, null, 2)}
-                    </pre>
+                    renderRecipes()
                   ) : (
                     <div className="flex flex-col gap-3">
                       {[1, 2, 3, 4].map((i) => (
@@ -1057,8 +1299,16 @@ export default function App() {
                       style={{ gap: mixGap, padding: `${mixPt} ${mixPt} 0 ${mixPt}` }}
                     >
                       <span className="font-medium" style={{ color: mixTextColor, opacity: 0.65, fontSize: mixFs }}>
-                        {recipeLoading ? "Đang tìm..." : "Mix Result"}
+                        Mix Result
                       </span>
+                      {!recipeLoading && recipeResult && matchPercent && (
+                        <span
+                          className="font-mono font-semibold shrink-0"
+                          style={{ color: mixTextColor, opacity: 0.85, fontSize: mixFs }}
+                        >
+                          {matchPercent}
+                        </span>
+                      )}
                     </div>
                   )}
                 </div>
@@ -1114,13 +1364,13 @@ export default function App() {
               </div>
 
               {activeTab === "suggested" ? (
-                <div className="flex-1 flex items-center justify-center">
+                <div className="flex-1 overflow-y-auto">
                   {recipeLoading ? (
-                    <span className="text-foreground/40 text-sm">Đang tải...</span>
+                    <div className="flex items-center justify-center h-full">
+                      <span className="text-foreground/40 text-sm">Đang tải...</span>
+                    </div>
                   ) : recipeResult ? (
-                    <pre className="text-foreground/70 text-sm whitespace-pre-wrap overflow-auto max-h-full">
-                      {JSON.stringify(recipeResult, null, 2)}
-                    </pre>
+                    renderSuggestColors()
                   ) : (
                     <div />
                   )}
@@ -1130,9 +1380,7 @@ export default function App() {
                   {recipeLoading ? (
                     <div className="text-foreground/40 text-sm text-center py-4">Đang tính công thức...</div>
                   ) : recipeResult ? (
-                    <pre className="text-foreground/70 text-sm whitespace-pre-wrap overflow-auto flex-1">
-                      {JSON.stringify(recipeResult, null, 2)}
-                    </pre>
+                    renderRecipes()
                   ) : (
                     <div style={{ display: "flex", flexDirection: "column", gap: ingGap }}>
                       {[1, 2, 3, 4].map((i) => (
