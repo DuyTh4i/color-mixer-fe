@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { Upload, X, Sun, Moon } from "lucide-react";
 import { useIsMobile } from "./components/ui/use-mobile";
+import { useDebounce } from "./hooks/useDebounce";
 
 // ─── Types ───
 interface Subcollection {
@@ -109,12 +110,18 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // ─── Fetch recipe when color is picked ───
+  // ─── Debounce selectedColor để tránh gọi API liên tục khi rê chuột / chạm ───
+  const debouncedColor = useDebounce(selectedColor, 350);
+
+  // ─── Fetch recipe when color is picked (sau debounce) ───
   useEffect(() => {
-    if (!selectedColor || selectedSubIds.size === 0) {
+    if (!debouncedColor || selectedSubIds.size === 0) {
       setRecipeResult(null);
       return;
     }
+    // Chụp giá trị để TypeScript biết chắc không null bên trong async closure
+    const color = debouncedColor;
+    const subIds = Array.from(selectedSubIds);
     let cancelled = false;
     async function fetchRecipe() {
       setRecipeLoading(true);
@@ -126,8 +133,8 @@ export default function App() {
             "X-API-KEY": API_KEY,
           },
           body: JSON.stringify({
-            hex_value: selectedColor!.hex,
-            subcollection_ids: Array.from(selectedSubIds),
+            hex_value: color.hex,
+            subcollection_ids: subIds,
           }),
         });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -141,7 +148,7 @@ export default function App() {
     }
     fetchRecipe();
     return () => { cancelled = true; };
-  }, [selectedColor, selectedSubIds]);
+  }, [debouncedColor, selectedSubIds]);
 
   // ─── Canvas / Image logic ───
   const redraw = useCallback(
@@ -902,7 +909,7 @@ export default function App() {
                   )}
                 </div>
               </button>
-              <span className="absolute right-4 text-foreground/40 text-xs font-medium select-none">thaidd@gmail.com</span>
+              <span className="absolute right-4 text-foreground/40 text-xs font-medium select-none">dev.thaidd@gmail.com</span>
             </div>
           </div>
         </div>
@@ -1180,7 +1187,7 @@ export default function App() {
                 className="absolute right-4 text-foreground/40 select-none"
                 style={{ fontSize: "clamp(11px, 0.68vw, 14px)" }}
               >
-                thaidd@gmail.com
+                dev.thaidd@gmail.com
               </span>
             </div>
           </aside>
