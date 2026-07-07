@@ -859,6 +859,7 @@ export default function App() {
               >
                 <input
                   type="range"
+                  className="slider-thumb-bar"
                   min={1}
                   max={10}
                   step={1}
