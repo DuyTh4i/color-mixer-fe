@@ -159,6 +159,8 @@ export default function App() {
     async function fetchRecipe() {
       setRecipeLoading(true);
       try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5 * 60 * 1000); // 5 minutes
         const res = await fetch(`${API_BASE}/recipes`, {
           method: "POST",
           headers: {
@@ -169,7 +171,9 @@ export default function App() {
             hex_value: color.hex,
             subcollection_ids: subIds,
           }),
+          signal: controller.signal,
         });
+        clearTimeout(timeoutId);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         if (!cancelled) setRecipeResult(data);
@@ -481,7 +485,7 @@ export default function App() {
     : "var(--color-foreground)";
 
   const matchPercent = recipeResult?.match_results != null
-    ? `${Math.round(recipeResult.match_results * 100)}%`
+    ? `${(recipeResult.match_results * 100).toFixed(2)}%`
     : null;
 
   // ─── Desktop brand section ───
