@@ -133,7 +133,7 @@ export default function App() {
             const firstBrand = data[0];
             setSelectedBrandIds(new Set([firstBrand.id]));
             if (firstBrand.subcollections.length > 0) {
-              setSelectedSubIds(new Set(firstBrand.subcollections.map((s) => s.id)));
+              setSelectedSubIds(new Set([firstBrand.subcollections[0].id]));
             }
           }
         }
