@@ -130,7 +130,11 @@ export default function App() {
         if (!cancelled) {
           setBrands(data);
           if (data.length > 0 && selectedBrandIds.size === 0) {
-            setSelectedBrandIds(new Set([data[0].id]));
+            const firstBrand = data[0];
+            setSelectedBrandIds(new Set([firstBrand.id]));
+            if (firstBrand.subcollections.length > 0) {
+              setSelectedSubIds(new Set(firstBrand.subcollections.map((s) => s.id)));
+            }
           }
         }
       } catch (err) {
@@ -170,6 +174,7 @@ export default function App() {
           body: JSON.stringify({
             hex_value: color.hex,
             subcollection_ids: subIds,
+            step_size: 10,
           }),
           signal: controller.signal,
         });
@@ -485,7 +490,7 @@ export default function App() {
     : "var(--color-foreground)";
 
   const matchPercent = recipeResult?.match_results != null
-    ? `${(recipeResult.match_results * 100).toFixed(2)}%`
+    ? `${Math.round(recipeResult.match_results)}%`
     : null;
 
   // ─── Desktop brand section ───
@@ -782,7 +787,7 @@ export default function App() {
     return (
       <div style={{ display: "flex", flexDirection: "column", gap: "clamp(10px, 0.84vw, 14px)" }}>
         {recipeResult.recipes.map((rcp, idx) => {
-          const rateLevel = Math.round(rcp.rate ?? 0);
+          const rateLevel = Math.round((rcp.rate ?? 0) / 10);
           const textColor = getLuminance(rcp.hex_value) > 0.35 ? "#111113" : "#f0f0f4";
           return (
             <div
