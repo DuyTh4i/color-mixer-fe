@@ -287,7 +287,7 @@ export default function App() {
 
   const canvasCb = useCallback((canvas: HTMLCanvasElement | null) => {
     canvasRef.current = canvas;
-    if (!canvas) return;
+    if (!canvas || isMobile) return;
     const onWheel = (e: WheelEvent) => {
       if (!imgRef.current) return;
       e.preventDefault();
@@ -299,7 +299,7 @@ export default function App() {
       setZoom(clamped);
     };
     canvas.addEventListener("wheel", onWheel, { passive: false });
-  }, []);
+  }, [isMobile]);
 
   const handleFile = (file: File) => {
     if (!file.type.startsWith("image/")) return;
