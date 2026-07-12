@@ -2,7 +2,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { Upload, X, Sun, Moon } from "lucide-react";
 import { useIsMobile } from "./components/ui/use-mobile";
 import { useDebounce } from "./hooks/useDebounce";
-import { getBrands, computeRecipes, type MixResult } from "./lib/colorMixer";
+import { getBrands, computeRecipes, adjustSingleIngredient, recalcFormula, type MixResult } from "./lib/colorMixer";
 
 // ─── Types ───
 interface Subcollection {
@@ -52,6 +52,7 @@ export default function App() {
   // ─── Recipe state ───
   const [recipeResult, setRecipeResult] = useState<MixResult | null>(null);
   const [recipeLoading, setRecipeLoading] = useState(false);
+  const targetHexRef = useRef<string>("");
 
   // ─── UI state ───
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -105,12 +106,15 @@ export default function App() {
       setRecipeLoading(true);
       try {
         // Sử dụng setTimeout để không block UI thread cho tính toán nặng
+        targetHexRef.current = color.hex;
         const result = await new Promise<MixResult>((resolve) => {
           setTimeout(() => {
             resolve(computeRecipes(color.hex, subIds, 10));
           }, 50);
         });
-        if (!cancelled) setRecipeResult(result);
+        if (!cancelled) {
+          setRecipeResult(result);
+        }
       } catch (err) {
         console.error("Failed to compute recipe:", err);
       } finally {
@@ -785,7 +789,7 @@ export default function App() {
                   </span>
                 </div>
               </div>
-              {/* Nửa dưới: range slider 1-10, màu trùng hex của card */}
+              {/* Nửa dưới: range slider 0-100 (hiển thị 0-10), màu trùng hex của card */}
               <div
                 style={{
                   background: "var(--ingredient-card)",
@@ -797,28 +801,45 @@ export default function App() {
               >
                 <input
                   type="range"
-                  className="slider-thumb-bar"
-                  min={1}
-                  max={10}
-                  step={1}
-                  value={rateLevel}
-                  readOnly
+                  min={0}
+                  max={100}
+                  step={10}
+                  value={Math.round(rcp.rate / 10) * 10}
+                  onChange={(e) => {
+                    const newPercent = Number(e.target.value);
+                    const newRecipes = adjustSingleIngredient(
+                      recipeResult!.recipes,
+                      idx,
+                      newPercent,
+                    );
+                    const recalc = recalcFormula(newRecipes, targetHexRef.current);
+                    setRecipeResult({
+                      ...recipeResult!,
+                      recipes: newRecipes,
+                      result_hex: recalc.result_hex,
+                      match_results: recalc.match_results,
+                    });
+                  }}
                   style={{
                     flex: 1,
-                    height: "clamp(6px, 0.5vw, 8px)",
+                    height: "clamp(12px, 1vw, 16px)",
                     appearance: "none",
                     WebkitAppearance: "none",
-                    background: `linear-gradient(to right, ${rcp.hex_value} 0%, ${rcp.hex_value} ${(rateLevel - 1) * 11.111}%, var(--border) ${(rateLevel - 1) * 11.111}%, var(--border) 100%)`,
+                    background: (() => {
+                      const sliderVal = Math.round(rcp.rate / 10) * 10;
+                      return `linear-gradient(to right, ${rcp.hex_value} 0%, ${rcp.hex_value} ${sliderVal}%, var(--border) ${sliderVal}%, var(--border) 100%)`;
+                    })(),
                     borderRadius: "999px",
                     outline: "none",
-                    cursor: "default",
+                    cursor: "pointer",
+                    border: "1px solid var(--border)",
                   }}
                 />
                 <span
                   className="shrink-0 font-mono font-semibold tabular-nums"
                   style={{ fontSize: "clamp(16px, 0.9vw, 18px)", color: "var(--color-foreground)", minWidth: "1.5em", textAlign: "right" }}
                 >
-                  {rateLevel}
+                  {Math.round(rcp.rate / 10)}
                 </span>
               </div>
             </div>

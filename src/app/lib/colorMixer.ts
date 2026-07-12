@@ -115,6 +115,90 @@ export function getBrands(): Brand[] {
   return ALL_BRANDS;
 }
 
+/**
+ * Khi người dùng kéo slider của một ingredient, phân phối lại % cho các ingredient còn lại
+ * theo tỷ lệ hiện tại, đảm bảo tổng luôn = 100%.
+ */
+/**
+ * Change ONE ingredient's percentage independently.
+ * Other ingredients remain unchanged. Total may != 100%.
+ * 
+ * Khi kéo 1 slider, chỉ ingredient đó thay đổi, các ingredient khác giữ nguyên.
+ * recalcFormula sẽ tự normalize trước khi blend.
+ */
+export function adjustSingleIngredient(
+  recipes: Recipe[],
+  changedIndex: number,
+  newPercent: number,
+): Recipe[] {
+  const n = recipes.length;
+  if (n === 0 || changedIndex < 0 || changedIndex >= n) return recipes;
+
+  const clamped = Math.max(0, Math.min(100, newPercent));
+  
+  const result: Recipe[] = [];
+  for (let i = 0; i < n; i++) {
+    if (i === changedIndex) {
+      result.push({ ...recipes[i], rate: clamped });
+    } else {
+      result.push({ ...recipes[i] }); // giữ nguyên
+    }
+  }
+  return result;
+}
+
+/**
+ * Normalize all ingredient percentages so they sum to 100%,
+ * keeping their relative proportions.
+ */
+function normalizeIngredients(recipes: Recipe[]): Recipe[] {
+  const total = recipes.reduce((sum, r) => sum + r.rate, 0);
+  if (total === 0) return recipes;
+  // Round to nearest 10 to sync with slider step=10
+  const raw = recipes.map((r) => ({ ...r, rate: Math.round(r.rate / total * 100 / 10) * 10 }));
+  // Fix rounding errors: adjust last ingredient so total = 100
+  const currentTotal = raw.reduce((sum, r) => sum + r.rate, 0);
+  const diff = 100 - currentTotal;
+  if (diff !== 0 && raw.length > 0) {
+    raw[raw.length - 1].rate += diff;
+  }
+  return raw;
+}
+
+/**
+ * Tính lại màu phối trộn và similarity sau khi slider thay đổi.
+ * Blend is computed based on NORMALIZED ratios.
+ * Trả về { result_hex, match_results }
+ */
+export function recalcFormula(
+  recipes: Recipe[],
+  targetHex: string,
+): { result_hex: string; match_results: number } {
+  const normalized = normalizeIngredients(recipes);
+  const blendedHex = blendRecipesByRate(normalized);
+
+  const [br, bg, bb] = hexToRgb(blendedHex);
+  const [tr, tg, tb] = hexToRgb(targetHex);
+  const error = labDistanceSquared(tr, tg, tb, br, bg, bb);
+  const similarity = calcSimilarityPercent(error);
+
+  return { result_hex: blendedHex, match_results: similarity };
+}
+
+/** Blend recipes using their rate field (0-100) to get result hex */
+function blendRecipesByRate(recipes: Array<{ hex_value: string; rate: number }>): string {
+  if (recipes.length === 0) return "#000000";
+  let rSum = 0, gSum = 0, bSum = 0;
+  for (const r of recipes) {
+    const [cr, cg, cb] = hexToRgb(r.hex_value);
+    const pct = r.rate;
+    rSum += cr * pct / 100;
+    gSum += cg * pct / 100;
+    bSum += cb * pct / 100;
+  }
+  return rgbToHex(rSum, gSum, bSum);
+}
+
 export function computeRecipes(
   hexValue: string,
   subcollectionIds: string[],
