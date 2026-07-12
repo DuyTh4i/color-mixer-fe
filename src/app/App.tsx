@@ -2,6 +2,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { Upload, X, Sun, Moon } from "lucide-react";
 import { useIsMobile } from "./components/ui/use-mobile";
 import { useDebounce } from "./hooks/useDebounce";
+import { getBrands, computeRecipes, type MixResult } from "./lib/colorMixer";
 
 // ─── Types ───
 interface Subcollection {
@@ -17,49 +18,6 @@ interface Brand {
   logo: string;
   subcollections: Subcollection[];
 }
-
-interface SuggestColor {
-  id: string;
-  color_name: string;
-  hex_value: string;
-  subcollections: {
-    product_img: string;
-    brands?: {
-      id: string;
-      logo: string;
-    };
-  };
-}
-
-interface Recipe {
-  id: string;
-  color_name: string;
-  hex_value: string;
-  subcollections: {
-    product_img: string;
-    brands?: {
-      id: string;
-      logo: string;
-    };
-  };
-  rate: number;
-}
-
-interface RecipeResponse {
-  result_hex?: string;
-  suggest_colors: SuggestColor[];
-  recipes: Recipe[];
-  match_results: number;
-}
-
-// ─── API base URL from env ───
-const API_BASE =
-  import.meta.env.VITE_API_PROD_URL ||
-  import.meta.env.VITE_API_TEST_URL ||
-  "http://127.0.0.1:8000/api/v1";
-
-// ─── API key from env (must have VITE_ prefix to be exposed by Vite) ───
-const API_KEY = import.meta.env.VITE_INTERNAL_API_KEY ?? "";
 
 // ─── Helpers ───
 function rgbToHex(r: number, g: number, b: number) {
@@ -92,7 +50,7 @@ export default function App() {
   const [selectedSubIds, setSelectedSubIds] = useState<Set<string>>(new Set());
 
   // ─── Recipe state ───
-  const [recipeResult, setRecipeResult] = useState<RecipeResponse | null>(null);
+  const [recipeResult, setRecipeResult] = useState<MixResult | null>(null);
   const [recipeLoading, setRecipeLoading] = useState(false);
 
   // ─── UI state ───
@@ -116,35 +74,18 @@ export default function App() {
 
   const hasColor = selectedColor !== null;
 
-  // ─── Fetch brands on mount ───
+  // ─── Load brands from db.json on mount ───
   useEffect(() => {
-    let cancelled = false;
-    async function fetchBrands() {
-      setBrandsLoading(true);
-      try {
-        const res = await fetch(`${API_BASE}/brands`, {
-          headers: { "X-API-KEY": API_KEY },
-        });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data: Brand[] = await res.json();
-        if (!cancelled) {
-          setBrands(data);
-          if (data.length > 0 && selectedBrandIds.size === 0) {
-            const firstBrand = data[0];
-            setSelectedBrandIds(new Set([firstBrand.id]));
-            if (firstBrand.subcollections.length > 0) {
-              setSelectedSubIds(new Set([firstBrand.subcollections[0].id]));
-            }
-          }
-        }
-      } catch (err) {
-        console.error("Failed to fetch brands:", err);
-      } finally {
-        if (!cancelled) setBrandsLoading(false);
+    const data = getBrands();
+    setBrands(data);
+    if (data.length > 0 && selectedBrandIds.size === 0) {
+      const firstBrand = data[0];
+      setSelectedBrandIds(new Set([firstBrand.id]));
+      if (firstBrand.subcollections.length > 0) {
+        setSelectedSubIds(new Set([firstBrand.subcollections[0].id]));
       }
     }
-    fetchBrands();
-    return () => { cancelled = true; };
+    setBrandsLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -163,27 +104,15 @@ export default function App() {
     async function fetchRecipe() {
       setRecipeLoading(true);
       try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 5 * 60 * 1000); // 5 minutes
-        const res = await fetch(`${API_BASE}/recipes`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-API-KEY": API_KEY,
-          },
-          body: JSON.stringify({
-            hex_value: color.hex,
-            subcollection_ids: subIds,
-            step_size: 10,
-          }),
-          signal: controller.signal,
+        // Sử dụng setTimeout để không block UI thread cho tính toán nặng
+        const result = await new Promise<MixResult>((resolve) => {
+          setTimeout(() => {
+            resolve(computeRecipes(color.hex, subIds, 10));
+          }, 50);
         });
-        clearTimeout(timeoutId);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-        if (!cancelled) setRecipeResult(data);
+        if (!cancelled) setRecipeResult(result);
       } catch (err) {
-        console.error("Failed to fetch recipe:", err);
+        console.error("Failed to compute recipe:", err);
       } finally {
         if (!cancelled) setRecipeLoading(false);
       }

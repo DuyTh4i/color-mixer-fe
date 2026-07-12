@@ -1,0 +1,2986 @@
+{
+  "Vallejo": {
+    "logo": "https://res.cloudinary.com/giw7o6dl/image/upload/v1783184154/logo_u5kzhn.webp",
+    "collections": {
+      "MODEL COLOR": {
+        "product_img": "https://res.cloudinary.com/giw7o6dl/image/upload/v1783263255/model_color_mrrmui.webp",
+        "colors": [
+          {
+            "id": "70.740",
+            "name": "Cam. Middle Brown",
+            "hex_val": "#47391F",
+            "rgb_val": [71, 57, 31]
+          },
+          {
+            "id": "70.741",
+            "name": "Cam. Black Green",
+            "hex_val": "#212624",
+            "rgb_val": [33, 38, 36]
+          },
+          {
+            "id": "70.745",
+            "name": "Dark Rose",
+            "hex_val": "#BA5D5A",
+            "rgb_val": [186, 93, 90]
+          },
+          {
+            "id": "70.746",
+            "name": "Chestnut Brown",
+            "hex_val": "#95573F",
+            "rgb_val": [149, 87, 63]
+          },
+          {
+            "id": "70.747",
+            "name": "Faded Red",
+            "hex_val": "#8F393C",
+            "rgb_val": [143, 57, 60]
+          },
+          {
+            "id": "70.748",
+            "name": "Light Pink",
+            "hex_val": "#C98894",
+            "rgb_val": [201, 136, 148]
+          },
+          {
+            "id": "70.749",
+            "name": "Dark Purple",
+            "hex_val": "#302436",
+            "rgb_val": [48, 36, 54]
+          },
+          {
+            "id": "70.750",
+            "name": "Light Violet",
+            "hex_val": "#7E6BA2",
+            "rgb_val": [126, 107, 162]
+          },
+          {
+            "id": "70.751",
+            "name": "Black Violet",
+            "hex_val": "#222332",
+            "rgb_val": [34, 35, 50]
+          },
+          {
+            "id": "70.752",
+            "name": "Infantry Blue",
+            "hex_val": "#36455D",
+            "rgb_val": [54, 69, 93]
+          },
+          {
+            "id": "70.753",
+            "name": "Light Blue Green",
+            "hex_val": "#5EABA3",
+            "rgb_val": [94, 171, 163]
+          },
+          {
+            "id": "70.754",
+            "name": "Continental Blue",
+            "hex_val": "#1D2E44",
+            "rgb_val": [29, 46, 68]
+          },
+          {
+            "id": "70.755",
+            "name": "Light Emerald",
+            "hex_val": "#207D6D",
+            "rgb_val": [32, 125, 109]
+          },
+          {
+            "id": "70.756",
+            "name": "Splinter Green",
+            "hex_val": "#415B46",
+            "rgb_val": [65, 91, 70]
+          },
+          {
+            "id": "70.757",
+            "name": "Pacific Green",
+            "hex_val": "#237462",
+            "rgb_val": [35, 116, 98]
+          },
+          {
+            "id": "70.758",
+            "name": "Bright Green",
+            "hex_val": "#2D7F3F",
+            "rgb_val": [45, 127, 63]
+          },
+          {
+            "id": "70.759",
+            "name": "German Tank Crew",
+            "hex_val": "#313A33",
+            "rgb_val": [49, 58, 51]
+          },
+          {
+            "id": "70.760",
+            "name": "Light Mud",
+            "hex_val": "#867C65",
+            "rgb_val": [134, 124, 101]
+          },
+          {
+            "id": "70.761",
+            "name": "Old Wood",
+            "hex_val": "#77614B",
+            "rgb_val": [119, 97, 75]
+          },
+          {
+            "id": "70.762",
+            "name": "Grey Brown",
+            "hex_val": "#443C36",
+            "rgb_val": [68, 60, 54]
+          },
+          {
+            "id": "70.763",
+            "name": "Canvas",
+            "hex_val": "#413A1C",
+            "rgb_val": [65, 58, 28]
+          },
+          {
+            "id": "70.764",
+            "name": "Military Yellow",
+            "hex_val": "#8A7330",
+            "rgb_val": [138, 115, 48]
+          },
+          {
+            "id": "70.765",
+            "name": "Desert Tan",
+            "hex_val": "#9E7E63",
+            "rgb_val": [158, 126, 99]
+          },
+          {
+            "id": "70.766",
+            "name": "Cream White",
+            "hex_val": "#EDE6CE",
+            "rgb_val": [237, 230, 206]
+          },
+          {
+            "id": "70.767",
+            "name": "Desert Yellow",
+            "hex_val": "#897645",
+            "rgb_val": [137, 118, 69]
+          },
+          {
+            "id": "70.768",
+            "name": "Flat Brown",
+            "hex_val": "#442D26",
+            "rgb_val": [68, 45, 38]
+          },
+          {
+            "id": "70.769",
+            "name": "Mustard Brown",
+            "hex_val": "#7E5828",
+            "rgb_val": [126, 88, 40]
+          },
+          {
+            "id": "70.770",
+            "name": "Old Wood",
+            "hex_val": "#75553D",
+            "rgb_val": [117, 85, 61]
+          },
+          {
+            "id": "70.771",
+            "name": "Dark Rust",
+            "hex_val": "#5F3429",
+            "rgb_val": [95, 52, 41]
+          },
+          {
+            "id": "70.772",
+            "name": "Medium Grey Blue",
+            "hex_val": "#475C6C",
+            "rgb_val": [71, 92, 108]
+          },
+          {
+            "id": "70.773",
+            "name": "Violet Grey",
+            "hex_val": "#575D62",
+            "rgb_val": [87, 93, 98]
+          },
+          {
+            "id": "70.774",
+            "name": "Lavender Grey",
+            "hex_val": "#6B6D74",
+            "rgb_val": [107, 109, 116]
+          },
+          {
+            "id": "70.802",
+            "name": "Sunset Red",
+            "hex_val": "#7C284D",
+            "rgb_val": [124, 40, 77]
+          },
+          {
+            "id": "70.803",
+            "name": "Brown Rose",
+            "hex_val": "#86544D",
+            "rgb_val": [134, 84, 77]
+          },
+          {
+            "id": "70.804",
+            "name": "Beige Red",
+            "hex_val": "#CE967C",
+            "rgb_val": [206, 150, 124]
+          },
+          {
+            "id": "70.805",
+            "name": "German Orange",
+            "hex_val": "#B76856",
+            "rgb_val": [183, 104, 86]
+          },
+          {
+            "id": "70.806",
+            "name": "German Yellow",
+            "hex_val": "#C4B264",
+            "rgb_val": [196, 178, 100]
+          },
+          {
+            "id": "70.807",
+            "name": "Oxford Blue",
+            "hex_val": "#2A304D",
+            "rgb_val": [42, 48, 77]
+          },
+          {
+            "id": "70.808",
+            "name": "Blue Green",
+            "hex_val": "#1E7F84",
+            "rgb_val": [30, 127, 132]
+          },
+          {
+            "id": "70.809",
+            "name": "Royal Blue",
+            "hex_val": "#1E4181",
+            "rgb_val": [30, 65, 129]
+          },
+          {
+            "id": "70.810",
+            "name": "Royal Purple",
+            "hex_val": "#412C4F",
+            "rgb_val": [65, 44, 79]
+          },
+          {
+            "id": "70.811",
+            "name": "Blue Violet",
+            "hex_val": "#494A8E",
+            "rgb_val": [73, 74, 142]
+          },
+          {
+            "id": "70.812",
+            "name": "Violet Red",
+            "hex_val": "#5E294B",
+            "rgb_val": [94, 41, 75]
+          },
+          {
+            "id": "70.814",
+            "name": "Burnt Red",
+            "hex_val": "#472223",
+            "rgb_val": [71, 34, 35]
+          },
+          {
+            "id": "70.815",
+            "name": "Basic Skin Tone",
+            "hex_val": "#DCB599",
+            "rgb_val": [220, 181, 153]
+          },
+          {
+            "id": "70.816",
+            "name": "Luftwaffe Uniform",
+            "hex_val": "#2D3D48",
+            "rgb_val": [45, 61, 72]
+          },
+          {
+            "id": "70.817",
+            "name": "Scarlet",
+            "hex_val": "#9E1B33",
+            "rgb_val": [158, 27, 51]
+          },
+          {
+            "id": "70.818",
+            "name": "Red Leather",
+            "hex_val": "#693530",
+            "rgb_val": [105, 53, 48]
+          },
+          {
+            "id": "70.819",
+            "name": "Iraqi Sand",
+            "hex_val": "#A48B6E",
+            "rgb_val": [164, 139, 110]
+          },
+          {
+            "id": "70.820",
+            "name": "Off-White",
+            "hex_val": "#EAE7DF",
+            "rgb_val": [234, 231, 223]
+          },
+          {
+            "id": "70.821",
+            "name": "Germ. Beige WWII",
+            "hex_val": "#7F7159",
+            "rgb_val": [127, 113, 89]
+          },
+          {
+            "id": "70.822",
+            "name": "German Camo Black Brown",
+            "hex_val": "#242121",
+            "rgb_val": [36, 33, 33]
+          },
+          {
+            "id": "70.823",
+            "name": "Luftwaffe Green",
+            "hex_val": "#4F5D3E",
+            "rgb_val": [79, 93, 62]
+          },
+          {
+            "id": "70.824",
+            "name": "Orange Ochre",
+            "hex_val": "#AA732F",
+            "rgb_val": [170, 115, 47]
+          },
+          {
+            "id": "70.825",
+            "name": "Pale Brown",
+            "hex_val": "#796055",
+            "rgb_val": [121, 96, 85]
+          },
+          {
+            "id": "70.826",
+            "name": "Medium Brown",
+            "hex_val": "#56453D",
+            "rgb_val": [86, 69, 61]
+          },
+          {
+            "id": "70.827",
+            "name": "Lime Green",
+            "hex_val": "#6D9436",
+            "rgb_val": [109, 148, 54]
+          },
+          {
+            "id": "70.828",
+            "name": "Mahogany Ink",
+            "hex_val": "#392523",
+            "rgb_val": [57, 37, 35]
+          },
+          {
+            "id": "70.829",
+            "name": "Amaranth Red",
+            "hex_val": "#A7243B",
+            "rgb_val": [167, 36, 59]
+          },
+          {
+            "id": "70.830",
+            "name": "Ger. Fieldgrey WWII",
+            "hex_val": "#495650",
+            "rgb_val": [73, 86, 80]
+          },
+          {
+            "id": "70.833",
+            "name": "Fern Green",
+            "hex_val": "#394F35",
+            "rgb_val": [57, 79, 53]
+          },
+          {
+            "id": "70.835",
+            "name": "Salmon Rose",
+            "hex_val": "#D39C8A",
+            "rgb_val": [211, 156, 138]
+          },
+          {
+            "id": "70.836",
+            "name": "London Grey",
+            "hex_val": "#535A5D",
+            "rgb_val": [83, 90, 93]
+          },
+          {
+            "id": "70.837",
+            "name": "Pale Sand",
+            "hex_val": "#DCCEB2",
+            "rgb_val": [220, 206, 178]
+          },
+          {
+            "id": "70.838",
+            "name": "Emerald",
+            "hex_val": "#1D594E",
+            "rgb_val": [29, 89, 78]
+          },
+          {
+            "id": "70.840",
+            "name": "Light Turquoise",
+            "hex_val": "#1B6A78",
+            "rgb_val": [27, 106, 120]
+          },
+          {
+            "id": "70.841",
+            "name": "Andrea Blue",
+            "hex_val": "#1B5B8E",
+            "rgb_val": [27, 91, 142]
+          },
+          {
+            "id": "70.843",
+            "name": "Cork Brown",
+            "hex_val": "#AA7F6B",
+            "rgb_val": [170, 127, 107]
+          },
+          {
+            "id": "70.844",
+            "name": "Deep Sky Blue",
+            "hex_val": "#1E6FA3",
+            "rgb_val": [30, 111, 163]
+          },
+          {
+            "id": "70.845",
+            "name": "Sunny Skin Tone",
+            "hex_val": "#DFA67F",
+            "rgb_val": [223, 166, 127]
+          },
+          {
+            "id": "70.846",
+            "name": "Mahogany Brown",
+            "hex_val": "#3A2421",
+            "rgb_val": [58, 36, 33]
+          },
+          {
+            "id": "70.847",
+            "name": "Dark Sand",
+            "hex_val": "#BBA178",
+            "rgb_val": [187, 161, 120]
+          },
+          {
+            "id": "70.850",
+            "name": "Medium Olive",
+            "hex_val": "#4D5333",
+            "rgb_val": [77, 83, 51]
+          },
+          {
+            "id": "70.851",
+            "name": "Bright Orange",
+            "hex_val": "#DB5C2D",
+            "rgb_val": [219, 92, 45]
+          },
+          {
+            "id": "70.856",
+            "name": "Ochre Brown",
+            "hex_val": "#785B3F",
+            "rgb_val": [120, 91, 63]
+          },
+          {
+            "id": "70.858",
+            "name": "Ice Yellow",
+            "hex_val": "#EAE39F",
+            "rgb_val": [234, 227, 159]
+          },
+          {
+            "id": "70.859",
+            "name": "Black Red",
+            "hex_val": "#3E1E25",
+            "rgb_val": [62, 30, 37]
+          },
+          {
+            "id": "70.860",
+            "name": "Med. Flesh Tone",
+            "hex_val": "#BE765B",
+            "rgb_val": [190, 118, 91]
+          },
+          {
+            "id": "70.861",
+            "name": "Gloss Black",
+            "hex_val": "#17191C",
+            "rgb_val": [23, 25, 28]
+          },
+          {
+            "id": "70.862",
+            "name": "Black Grey",
+            "hex_val": "#2E3336",
+            "rgb_val": [46, 51, 54]
+          },
+          {
+            "id": "70.866",
+            "name": "Grey Green",
+            "hex_val": "#4A5551",
+            "rgb_val": [74, 85, 81]
+          },
+          {
+            "id": "70.867",
+            "name": "Dark Blue Grey",
+            "hex_val": "#434F55",
+            "rgb_val": [67, 79, 85]
+          },
+          {
+            "id": "70.868",
+            "name": "Dark Sea Green",
+            "hex_val": "#3B4643",
+            "rgb_val": [59, 70, 67]
+          },
+          {
+            "id": "70.869",
+            "name": "Basalt Grey",
+            "hex_val": "#454B4E",
+            "rgb_val": [69, 75, 78]
+          },
+          {
+            "id": "70.870",
+            "name": "Medium Sea Grey",
+            "hex_val": "#6B7374",
+            "rgb_val": [107, 115, 116]
+          },
+          {
+            "id": "70.871",
+            "name": "Leather Brown",
+            "hex_val": "#443329",
+            "rgb_val": [68, 51, 41]
+          },
+          {
+            "id": "70.872",
+            "name": "Chocolate Brown",
+            "hex_val": "#3A2C29",
+            "rgb_val": [58, 44, 41]
+          },
+          {
+            "id": "70.873",
+            "name": "US Field Drab",
+            "hex_val": "#584A3B",
+            "rgb_val": [88, 74, 59]
+          },
+          {
+            "id": "70.874",
+            "name": "Tan Earth",
+            "hex_val": "#7C5B49",
+            "rgb_val": [124, 91, 73]
+          },
+          {
+            "id": "70.875",
+            "name": "Beige Brown",
+            "hex_val": "#6A4E3F",
+            "rgb_val": [106, 78, 63]
+          },
+          {
+            "id": "70.876",
+            "name": "Brown Sand",
+            "hex_val": "#CA9861",
+            "rgb_val": [202, 152, 97]
+          },
+          {
+            "id": "70.877",
+            "name": "Gold Brown",
+            "hex_val": "#95733F",
+            "rgb_val": [149, 115, 63]
+          },
+          {
+            "id": "70.879",
+            "name": "Green Brown",
+            "hex_val": "#796938",
+            "rgb_val": [121, 105, 56]
+          },
+          {
+            "id": "70.880",
+            "name": "Khaki Grey",
+            "hex_val": "#7B735F",
+            "rgb_val": [123, 115, 95]
+          },
+          {
+            "id": "70.881",
+            "name": "Green Yellow",
+            "hex_val": "#787250",
+            "rgb_val": [120, 114, 80]
+          },
+          {
+            "id": "70.882",
+            "name": "Middle Stone",
+            "hex_val": "#897A46",
+            "rgb_val": [137, 122, 70]
+          },
+          {
+            "id": "70.883",
+            "name": "Silver Grey",
+            "hex_val": "#BCC1BC",
+            "rgb_val": [188, 193, 188]
+          },
+          {
+            "id": "70.884",
+            "name": "Stone Grey",
+            "hex_val": "#7B7C73",
+            "rgb_val": [123, 124, 115]
+          },
+          {
+            "id": "70.885",
+            "name": "Pastel Green",
+            "hex_val": "#7A8E7C",
+            "rgb_val": [122, 142, 124]
+          },
+          {
+            "id": "70.886",
+            "name": "Green Grey",
+            "hex_val": "#5D6E66",
+            "rgb_val": [93, 110, 102]
+          },
+          {
+            "id": "70.887",
+            "name": "US Olive Drab",
+            "hex_val": "#5B5B47",
+            "rgb_val": [91, 91, 71]
+          },
+          {
+            "id": "70.888",
+            "name": "Olive Grey",
+            "hex_val": "#434B43",
+            "rgb_val": [67, 75, 67]
+          },
+          {
+            "id": "70.889",
+            "name": "Olive Brown",
+            "hex_val": "#382E26",
+            "rgb_val": [56, 46, 38]
+          },
+          {
+            "id": "70.890",
+            "name": "Refractive Green",
+            "hex_val": "#424838",
+            "rgb_val": [66, 72, 56]
+          },
+          {
+            "id": "70.891",
+            "name": "Intermediate Green",
+            "hex_val": "#3F5D44",
+            "rgb_val": [63, 93, 68]
+          },
+          {
+            "id": "70.892",
+            "name": "Yellow Olive",
+            "hex_val": "#605C33",
+            "rgb_val": [96, 92, 51]
+          },
+          {
+            "id": "70.893",
+            "name": "US Dark Green",
+            "hex_val": "#404639",
+            "rgb_val": [64, 70, 57]
+          },
+          {
+            "id": "70.894",
+            "name": "Cam. Olive Green",
+            "hex_val": "#3B4237",
+            "rgb_val": [59, 66, 55]
+          },
+          {
+            "id": "70.895",
+            "name": "Gunship Green",
+            "hex_val": "#485D4B",
+            "rgb_val": [72, 93, 75]
+          },
+          {
+            "id": "70.896",
+            "name": "Extra Dark Green",
+            "hex_val": "#2D352E",
+            "rgb_val": [45, 53, 46]
+          },
+          {
+            "id": "70.897",
+            "name": "Bronze Green",
+            "hex_val": "#334138",
+            "rgb_val": [51, 65, 56]
+          },
+          {
+            "id": "70.898",
+            "name": "Dark Sea Blue",
+            "hex_val": "#1B2E3D",
+            "rgb_val": [27, 46, 61]
+          },
+          {
+            "id": "70.899",
+            "name": "Dark Prussian Blue",
+            "hex_val": "#1B263B",
+            "rgb_val": [27, 38, 59]
+          },
+          {
+            "id": "70.901",
+            "name": "Pastel Blue",
+            "hex_val": "#6A90BA",
+            "rgb_val": [106, 144, 186]
+          },
+          {
+            "id": "70.902",
+            "name": "Azure",
+            "hex_val": "#2B61A4",
+            "rgb_val": [43, 97, 164]
+          },
+          {
+            "id": "70.905",
+            "name": "Blue Grey Pale",
+            "hex_val": "#8E9596",
+            "rgb_val": [142, 149, 150]
+          },
+          {
+            "id": "70.906",
+            "name": "Pale Blue",
+            "hex_val": "#7C8D98",
+            "rgb_val": [124, 141, 152]
+          },
+          {
+            "id": "70.907",
+            "name": "Pale Grey Blue",
+            "hex_val": "#9AA3A8",
+            "rgb_val": [154, 163, 168]
+          },
+          {
+            "id": "70.908",
+            "name": "Carmine Red",
+            "hex_val": "#AA1E2E",
+            "rgb_val": [170, 30, 46]
+          },
+          {
+            "id": "70.909",
+            "name": "Vermilion",
+            "hex_val": "#B72F2D",
+            "rgb_val": [183, 47, 45]
+          },
+          {
+            "id": "70.911",
+            "name": "Light Orange",
+            "hex_val": "#DB7F2E",
+            "rgb_val": [219, 127, 46]
+          },
+          {
+            "id": "70.913",
+            "name": "Yellow Ochre",
+            "hex_val": "#947849",
+            "rgb_val": [148, 120, 73]
+          },
+          {
+            "id": "70.914",
+            "name": "Green Ochre",
+            "hex_val": "#7F7239",
+            "rgb_val": [127, 114, 57]
+          },
+          {
+            "id": "70.915",
+            "name": "Deep Yellow",
+            "hex_val": "#DFBC0C",
+            "rgb_val": [223, 188, 12]
+          },
+          {
+            "id": "70.916",
+            "name": "Sand Yellow",
+            "hex_val": "#C4A154",
+            "rgb_val": [196, 161, 84]
+          },
+          {
+            "id": "70.917",
+            "name": "Beige",
+            "hex_val": "#AB9475",
+            "rgb_val": [171, 148, 117]
+          },
+          {
+            "id": "70.918",
+            "name": "Ivory",
+            "hex_val": "#EFEADA",
+            "rgb_val": [239, 234, 218]
+          },
+          {
+            "id": "70.919",
+            "name": "Cold White",
+            "hex_val": "#E7ECF1",
+            "rgb_val": [231, 236, 241]
+          },
+          {
+            "id": "70.920",
+            "name": "German Uniform",
+            "hex_val": "#44534F",
+            "rgb_val": [68, 83, 79]
+          },
+          {
+            "id": "70.921",
+            "name": "English Uniform",
+            "hex_val": "#6C5935",
+            "rgb_val": [108, 89, 53]
+          },
+          {
+            "id": "70.922",
+            "name": "Uniform Green",
+            "hex_val": "#556839",
+            "rgb_val": [85, 104, 57]
+          },
+          {
+            "id": "70.923",
+            "name": "Japan. Unif. WWII",
+            "hex_val": "#987E39",
+            "rgb_val": [152, 126, 57]
+          },
+          {
+            "id": "70.924",
+            "name": "Russian Unif. WWII",
+            "hex_val": "#535641",
+            "rgb_val": [83, 86, 65]
+          },
+          {
+            "id": "70.925",
+            "name": "Blue",
+            "hex_val": "#1A3D89",
+            "rgb_val": [26, 61, 137]
+          },
+          {
+            "id": "70.926",
+            "name": "Red",
+            "hex_val": "#9F202D",
+            "rgb_val": [159, 32, 45]
+          },
+          {
+            "id": "70.927",
+            "name": "Dark Flesh",
+            "hex_val": "#A56048",
+            "rgb_val": [165, 96, 72]
+          },
+          {
+            "id": "70.928",
+            "name": "Light Flesh",
+            "hex_val": "#E6CEB5",
+            "rgb_val": [230, 206, 181]
+          },
+          {
+            "id": "70.929",
+            "name": "Light Brown",
+            "hex_val": "#93593D",
+            "rgb_val": [147, 89, 61]
+          },
+          {
+            "id": "70.930",
+            "name": "Dark Blue",
+            "hex_val": "#1B2644",
+            "rgb_val": [27, 38, 68]
+          },
+          {
+            "id": "70.939",
+            "name": "Smoke Ink",
+            "hex_val": "#39342B",
+            "rgb_val": [57, 52, 43]
+          },
+          {
+            "id": "70.940",
+            "name": "Saddle Brown",
+            "hex_val": "#523A31",
+            "rgb_val": [82, 58, 49]
+          },
+          {
+            "id": "70.941",
+            "name": "Burnt Umber",
+            "hex_val": "#47342C",
+            "rgb_val": [71, 52, 44]
+          },
+          {
+            "id": "70.943",
+            "name": "Grey Blue",
+            "hex_val": "#3E4E5A",
+            "rgb_val": [62, 78, 90]
+          },
+          {
+            "id": "70.944",
+            "name": "Old Rose",
+            "hex_val": "#9F625D",
+            "rgb_val": [159, 98, 93]
+          },
+          {
+            "id": "70.945",
+            "name": "Magenta",
+            "hex_val": "#872B57",
+            "rgb_val": [135, 43, 87]
+          },
+          {
+            "id": "70.946",
+            "name": "Dark Red",
+            "hex_val": "#552229",
+            "rgb_val": [85, 34, 41]
+          },
+          {
+            "id": "70.947",
+            "name": "Dark Vermilion",
+            "hex_val": "#7E1A29",
+            "rgb_val": [126, 26, 41]
+          },
+          {
+            "id": "70.948",
+            "name": "Amarillo Dorado",
+            "hex_val": "#DB9E20",
+            "rgb_val": [219, 158, 32]
+          },
+          {
+            "id": "70.949",
+            "name": "Light Yellow",
+            "hex_val": "#EFE167",
+            "rgb_val": [239, 225, 103]
+          },
+          {
+            "id": "70.950",
+            "name": "Black",
+            "hex_val": "#1C1D21",
+            "rgb_val": [28, 29, 33]
+          },
+          {
+            "id": "70.951",
+            "name": "White",
+            "hex_val": "#FFFFFF",
+            "rgb_val": [255, 255, 255]
+          },
+          {
+            "id": "70.952",
+            "name": "Lemon Yellow",
+            "hex_val": "#EAD625",
+            "rgb_val": [234, 214, 37]
+          },
+          {
+            "id": "70.953",
+            "name": "Flat Yellow",
+            "hex_val": "#E0BD19",
+            "rgb_val": [224, 189, 25]
+          },
+          {
+            "id": "70.954",
+            "name": "Yellow Green",
+            "hex_val": "#AAAF30",
+            "rgb_val": [170, 175, 48]
+          },
+          {
+            "id": "70.955",
+            "name": "Flat Flesh",
+            "hex_val": "#DC9C7C",
+            "rgb_val": [220, 156, 124]
+          },
+          {
+            "id": "70.956",
+            "name": "Clear Orange",
+            "hex_val": "#CD482B",
+            "rgb_val": [205, 72, 43]
+          },
+          {
+            "id": "70.957",
+            "name": "Flat Red",
+            "hex_val": "#8E1D2D",
+            "rgb_val": [142, 29, 45]
+          },
+          {
+            "id": "70.958",
+            "name": "Pink",
+            "hex_val": "#BA6881",
+            "rgb_val": [186, 104, 129]
+          },
+          {
+            "id": "70.959",
+            "name": "Purple",
+            "hex_val": "#552D53",
+            "rgb_val": [85, 45, 83]
+          },
+          {
+            "id": "70.960",
+            "name": "Violet",
+            "hex_val": "#3C3D77",
+            "rgb_val": [60, 61, 119]
+          },
+          {
+            "id": "70.961",
+            "name": "Sky Blue",
+            "hex_val": "#579EC7",
+            "rgb_val": [87, 158, 199]
+          },
+          {
+            "id": "70.962",
+            "name": "Flat Blue",
+            "hex_val": "#22569C",
+            "rgb_val": [34, 86, 156]
+          },
+          {
+            "id": "70.963",
+            "name": "Medium Blue",
+            "hex_val": "#1B487B",
+            "rgb_val": [27, 72, 123]
+          },
+          {
+            "id": "70.964",
+            "name": "Field Blue",
+            "hex_val": "#3A4853",
+            "rgb_val": [58, 72, 83]
+          },
+          {
+            "id": "70.965",
+            "name": "Prussian Blue",
+            "hex_val": "#203657",
+            "rgb_val": [32, 54, 87]
+          },
+          {
+            "id": "70.966",
+            "name": "Turquoise",
+            "hex_val": "#1D7C86",
+            "rgb_val": [29, 124, 134]
+          },
+          {
+            "id": "70.967",
+            "name": "Olive Green",
+            "hex_val": "#4E5A35",
+            "rgb_val": [78, 90, 53]
+          },
+          {
+            "id": "70.968",
+            "name": "Flat Green",
+            "hex_val": "#285936",
+            "rgb_val": [40, 89, 54]
+          },
+          {
+            "id": "70.969",
+            "name": "Park Green Flat",
+            "hex_val": "#1E6E41",
+            "rgb_val": [30, 110, 65]
+          },
+          {
+            "id": "70.970",
+            "name": "Deep Green",
+            "hex_val": "#1A4F35",
+            "rgb_val": [26, 79, 53]
+          },
+          {
+            "id": "70.971",
+            "name": "Light Green Grey",
+            "hex_val": "#9FA9A2",
+            "rgb_val": [159, 169, 162]
+          },
+          {
+            "id": "70.972",
+            "name": "Light Green Blue",
+            "hex_val": "#6A7E7C",
+            "rgb_val": [106, 126, 124]
+          },
+          {
+            "id": "70.974",
+            "name": "Green Sky",
+            "hex_val": "#69896A",
+            "rgb_val": [105, 137, 106]
+          },
+          {
+            "id": "70.975",
+            "name": "Military Green",
+            "hex_val": "#4A533E",
+            "rgb_val": [74, 83, 62]
+          },
+          {
+            "id": "70.976",
+            "name": "Buff",
+            "hex_val": "#D0AF5A",
+            "rgb_val": [208, 175, 90]
+          },
+          {
+            "id": "70.977",
+            "name": "Desert Yellow",
+            "hex_val": "#917937",
+            "rgb_val": [145, 121, 55]
+          },
+          {
+            "id": "70.978",
+            "name": "Dark Yellow",
+            "hex_val": "#8B8643",
+            "rgb_val": [139, 134, 67]
+          },
+          {
+            "id": "70.979",
+            "name": "Cam. Dark Green",
+            "hex_val": "#303C29",
+            "rgb_val": [48, 60, 41]
+          },
+          {
+            "id": "70.980",
+            "name": "Black Green",
+            "hex_val": "#1C2A26",
+            "rgb_val": [28, 42, 38]
+          },
+          {
+            "id": "70.981",
+            "name": "Orange Brown",
+            "hex_val": "#865435",
+            "rgb_val": [134, 84, 53]
+          },
+          {
+            "id": "70.982",
+            "name": "Cavalry Brown",
+            "hex_val": "#562E2A",
+            "rgb_val": [86, 46, 42]
+          },
+          {
+            "id": "70.983",
+            "name": "Flat Earth",
+            "hex_val": "#624E43",
+            "rgb_val": [98, 78, 67]
+          },
+          {
+            "id": "70.984",
+            "name": "Flat Brown",
+            "hex_val": "#442D26",
+            "rgb_val": [68, 45, 38]
+          },
+          {
+            "id": "70.985",
+            "name": "Hull Red",
+            "hex_val": "#2D1F21",
+            "rgb_val": [45, 31, 33]
+          },
+          {
+            "id": "70.986",
+            "name": "Deck Tan",
+            "hex_val": "#AFA99E",
+            "rgb_val": [175, 169, 158]
+          },
+          {
+            "id": "70.987",
+            "name": "Medium Grey",
+            "hex_val": "#777C7E",
+            "rgb_val": [119, 124, 126]
+          },
+          {
+            "id": "70.988",
+            "name": "Khaki",
+            "hex_val": "#675D4E",
+            "rgb_val": [103, 93, 78]
+          },
+          {
+            "id": "70.989",
+            "name": "Sky Grey",
+            "hex_val": "#AAB1B1",
+            "rgb_val": [170, 177, 177]
+          },
+          {
+            "id": "70.990",
+            "name": "Light Grey",
+            "hex_val": "#9DA3A1",
+            "rgb_val": [157, 163, 161]
+          },
+          {
+            "id": "70.991",
+            "name": "Dark Sea Grey",
+            "hex_val": "#4E5456",
+            "rgb_val": [78, 84, 86]
+          },
+          {
+            "id": "70.992",
+            "name": "Neutral Grey",
+            "hex_val": "#6F7678",
+            "rgb_val": [111, 118, 120]
+          },
+          {
+            "id": "70.993",
+            "name": "White Grey",
+            "hex_val": "#CED5D5",
+            "rgb_val": [206, 213, 213]
+          },
+          {
+            "id": "70.994",
+            "name": "Dark Grey",
+            "hex_val": "#293138",
+            "rgb_val": [41, 49, 56]
+          },
+          {
+            "id": "70.995",
+            "name": "German Grey",
+            "hex_val": "#303538",
+            "rgb_val": [48, 53, 56]
+          }
+        ]
+      },
+      "MODEL AIR": {
+        "product_img": "https://res.cloudinary.com/giw7o6dl/image/upload/v1783270481/model_air_kypwu2.webp",
+        "colors": [
+          {
+            "id": "71.001",
+            "name": "White",
+            "hex_val": "#F6F8F7",
+            "rgb_val": [246, 248, 247]
+          },
+          {
+            "id": "71.002",
+            "name": "Medium Yellow",
+            "hex_val": "#FAAF18",
+            "rgb_val": [250, 175, 24]
+          },
+          {
+            "id": "71.003",
+            "name": "Red RLM23",
+            "hex_val": "#C92C27",
+            "rgb_val": [201, 44, 39]
+          },
+          {
+            "id": "71.004",
+            "name": "Blue",
+            "hex_val": "#31456A",
+            "rgb_val": [49, 69, 106]
+          },
+          {
+            "id": "71.005",
+            "name": "Grey Blue",
+            "hex_val": "#414956",
+            "rgb_val": [65, 73, 86]
+          },
+          {
+            "id": "71.006",
+            "name": "Light Green Chrom.",
+            "hex_val": "#586547",
+            "rgb_val": [88, 101, 71]
+          },
+          {
+            "id": "71.007",
+            "name": "Olive Green",
+            "hex_val": "#2D3738",
+            "rgb_val": [45, 55, 56]
+          },
+          {
+            "id": "71.008",
+            "name": "Pale Blue",
+            "hex_val": "#709196",
+            "rgb_val": [112, 145, 150]
+          },
+          {
+            "id": "71.009",
+            "name": "Eau de Nil \"D.E.G.\"",
+            "hex_val": "#9EB483",
+            "rgb_val": [158, 180, 131]
+          },
+          {
+            "id": "71.010",
+            "name": "Interior Green",
+            "hex_val": "#5F5B42",
+            "rgb_val": [95, 91, 66]
+          },
+          {
+            "id": "71.011",
+            "name": "Dark Green RLM83",
+            "hex_val": "#494C45",
+            "rgb_val": [73, 76, 69]
+          },
+          {
+            "id": "71.012",
+            "name": "Dark Green",
+            "hex_val": "#4E5243",
+            "rgb_val": [78, 82, 67]
+          },
+          {
+            "id": "71.013",
+            "name": "Yellow Olive",
+            "hex_val": "#3E4442",
+            "rgb_val": [62, 68, 66]
+          },
+          {
+            "id": "71.014",
+            "name": "Gunship Green",
+            "hex_val": "#465445",
+            "rgb_val": [70, 84, 69]
+          },
+          {
+            "id": "71.015",
+            "name": "Dark Green RLM71",
+            "hex_val": "#484631",
+            "rgb_val": [72, 70, 49]
+          },
+          {
+            "id": "71.016",
+            "name": "USAF Olive Drab",
+            "hex_val": "#5C5948",
+            "rgb_val": [92, 89, 72]
+          },
+          {
+            "id": "71.017",
+            "name": "Russian Green 4BO",
+            "hex_val": "#4E5043",
+            "rgb_val": [78, 80, 67]
+          },
+          {
+            "id": "71.018",
+            "name": "Black Green",
+            "hex_val": "#414B4D",
+            "rgb_val": [65, 75, 77]
+          },
+          {
+            "id": "71.019",
+            "name": "Camou. Dark Green",
+            "hex_val": "#A8AAA8",
+            "rgb_val": [168, 170, 168]
+          },
+          {
+            "id": "71.020",
+            "name": "Green Brown",
+            "hex_val": "#A5A6A3",
+            "rgb_val": [165, 166, 163]
+          },
+          {
+            "id": "71.021",
+            "name": "Black Green RLM70",
+            "hex_val": "#9DA3A3",
+            "rgb_val": [157, 163, 163]
+          },
+          {
+            "id": "71.022",
+            "name": "Light Green RLM82",
+            "hex_val": "#9DA19C",
+            "rgb_val": [157, 161, 156]
+          },
+          {
+            "id": "71.023",
+            "name": "Hemp",
+            "hex_val": "#B4B3A8",
+            "rgb_val": [180, 179, 168]
+          },
+          {
+            "id": "71.024",
+            "name": "Khaki Brown",
+            "hex_val": "#B9B2A7",
+            "rgb_val": [185, 178, 167]
+          },
+          {
+            "id": "71.025",
+            "name": "Dark Yellow",
+            "hex_val": "#BBB19F",
+            "rgb_val": [187, 177, 159]
+          },
+          {
+            "id": "71.026",
+            "name": "USA Flat Brown",
+            "hex_val": "#B1A499",
+            "rgb_val": [177, 164, 153]
+          },
+          {
+            "id": "71.027",
+            "name": "Light Brown",
+            "hex_val": "#C0B4A4",
+            "rgb_val": [192, 180, 164]
+          },
+          {
+            "id": "71.028",
+            "name": "Sand Yellow",
+            "hex_val": "#FCFCFC",
+            "rgb_val": [252, 252, 252]
+          },
+          {
+            "id": "71.029",
+            "name": "Dark Earth",
+            "hex_val": "#F9F9F9",
+            "rgb_val": [249, 249, 249]
+          },
+          {
+            "id": "71.030",
+            "name": "Brown Green",
+            "hex_val": "#EBEBED",
+            "rgb_val": [235, 235, 237]
+          },
+          {
+            "id": "71.031",
+            "name": "Middle Stone",
+            "hex_val": "#E7E8EA",
+            "rgb_val": [231, 232, 234]
+          },
+          {
+            "id": "71.032",
+            "name": "Golden Brown",
+            "hex_val": "#DBDDDF",
+            "rgb_val": [219, 221, 223]
+          },
+          {
+            "id": "71.033",
+            "name": "Yellow Ochre",
+            "hex_val": "#E0E0E1",
+            "rgb_val": [224, 224, 225]
+          },
+          {
+            "id": "71.034",
+            "name": "Sand Brown",
+            "hex_val": "#E1E2E4",
+            "rgb_val": [225, 226, 228]
+          },
+          {
+            "id": "71.035",
+            "name": "Camou. Pale Brown",
+            "hex_val": "#DADBDD",
+            "rgb_val": [218, 219, 221]
+          },
+          {
+            "id": "71.036",
+            "name": "Mahogany",
+            "hex_val": "#D6D6D8",
+            "rgb_val": [214, 214, 216]
+          },
+          {
+            "id": "71.037",
+            "name": "Mud Brown",
+            "hex_val": "#B5B7B8",
+            "rgb_val": [181, 183, 184]
+          },
+          {
+            "id": "71.038",
+            "name": "Cam. Med. Brown",
+            "hex_val": "#B2AFAF",
+            "rgb_val": [178, 175, 175]
+          },
+          {
+            "id": "71.039",
+            "name": "Hull Red",
+            "hex_val": "#959496",
+            "rgb_val": [149, 148, 150]
+          },
+          {
+            "id": "71.040",
+            "name": "Burnt Umber",
+            "hex_val": "#979797",
+            "rgb_val": [151, 151, 151]
+          },
+          {
+            "id": "71.041",
+            "name": "Armour Brown",
+            "hex_val": "#9C9C9D",
+            "rgb_val": [156, 156, 157]
+          },
+          {
+            "id": "71.042",
+            "name": "Dark Brown RLM61",
+            "hex_val": "#959495",
+            "rgb_val": [149, 148, 149]
+          },
+          {
+            "id": "71.043",
+            "name": "US Olive Drab",
+            "hex_val": "#9D9FA1",
+            "rgb_val": [157, 159, 161]
+          },
+          {
+            "id": "71.044",
+            "name": "Grey RLM02",
+            "hex_val": "#9C9C9D",
+            "rgb_val": [156, 156, 157]
+          },
+          {
+            "id": "71.045",
+            "name": "Cement Grey",
+            "hex_val": "#D2D3D5",
+            "rgb_val": [210, 211, 213]
+          },
+          {
+            "id": "71.046",
+            "name": "Pale Blue Grey",
+            "hex_val": "#D5D4D5",
+            "rgb_val": [213, 212, 213]
+          },
+          {
+            "id": "71.047",
+            "name": "Grey",
+            "hex_val": "#CFCFD1",
+            "rgb_val": [207, 207, 209]
+          },
+          {
+            "id": "71.048",
+            "name": "Engine Gray",
+            "hex_val": "#C4C6C9",
+            "rgb_val": [196, 198, 201]
+          },
+          {
+            "id": "71.049",
+            "name": "Sea Grey",
+            "hex_val": "#B9BBBD",
+            "rgb_val": [185, 187, 189]
+          },
+          {
+            "id": "71.050",
+            "name": "Light Gray",
+            "hex_val": "#B9BBBD",
+            "rgb_val": [185, 187, 189]
+          },
+          {
+            "id": "71.051",
+            "name": "Neutral Gray",
+            "hex_val": "#BDBEC0",
+            "rgb_val": [189, 190, 192]
+          },
+          {
+            "id": "71.052",
+            "name": "Anthracite Grey",
+            "hex_val": "#ACACAE",
+            "rgb_val": [172, 172, 174]
+          },
+          {
+            "id": "71.053",
+            "name": "Dark Sea Gray",
+            "hex_val": "#C3C6C8",
+            "rgb_val": [195, 198, 200]
+          },
+          {
+            "id": "71.054",
+            "name": "Dark Grey Blue",
+            "hex_val": "#B0B2B5",
+            "rgb_val": [176, 178, 181]
+          },
+          {
+            "id": "71.055",
+            "name": "Black Grey RLM66",
+            "hex_val": "#ADAEAF",
+            "rgb_val": [173, 174, 175]
+          },
+          {
+            "id": "71.056",
+            "name": "Panzer Dark Grey",
+            "hex_val": "#DADBDD",
+            "rgb_val": [218, 219, 221]
+          },
+          {
+            "id": "71.057",
+            "name": "Black",
+            "hex_val": "#9F9F9F",
+            "rgb_val": [159, 159, 159]
+          },
+          {
+            "id": "71.077",
+            "name": "Wood",
+            "hex_val": "#A07241",
+            "rgb_val": [160, 114, 65]
+          },
+          {
+            "id": "71.078",
+            "name": "Yellow RLM04",
+            "hex_val": "#E89E33",
+            "rgb_val": [232, 158, 51]
+          },
+          {
+            "id": "71.079",
+            "name": "Tan Earth",
+            "hex_val": "#A07C6C",
+            "rgb_val": [160, 124, 108]
+          },
+          {
+            "id": "71.080",
+            "name": "Rust",
+            "hex_val": "#6B534F",
+            "rgb_val": [107, 83, 79]
+          },
+          {
+            "id": "71.081",
+            "name": "Ochre",
+            "hex_val": "#716841",
+            "rgb_val": [113, 104, 65]
+          },
+          {
+            "id": "71.082",
+            "name": "Fluorescent Red",
+            "hex_val": "#F26754",
+            "rgb_val": [242, 103, 84]
+          },
+          {
+            "id": "71.083",
+            "name": "Orange",
+            "hex_val": "#EB532C",
+            "rgb_val": [235, 83, 44]
+          },
+          {
+            "id": "71.084",
+            "name": "Fire Red",
+            "hex_val": "#7E3E34",
+            "rgb_val": [126, 62, 52]
+          },
+          {
+            "id": "71.085",
+            "name": "Ferrari Red",
+            "hex_val": "#AC3D34",
+            "rgb_val": [172, 61, 52]
+          },
+          {
+            "id": "71.086",
+            "name": "Light Red",
+            "hex_val": "#E74F2A",
+            "rgb_val": [231, 79, 42]
+          },
+          {
+            "id": "71.087",
+            "name": "Steel Blue",
+            "hex_val": "#103F53",
+            "rgb_val": [16, 63, 83]
+          },
+          {
+            "id": "71.088",
+            "name": "French Blue",
+            "hex_val": "#224771",
+            "rgb_val": [34, 71, 113]
+          },
+          {
+            "id": "71.089",
+            "name": "Light Sea Blue",
+            "hex_val": "#06A6D6",
+            "rgb_val": [6, 166, 214]
+          },
+          {
+            "id": "71.090",
+            "name": "Deep Sky",
+            "hex_val": "#1B3955",
+            "rgb_val": [27, 57, 85]
+          },
+          {
+            "id": "71.091",
+            "name": "Signal Blue",
+            "hex_val": "#1E303E",
+            "rgb_val": [30, 48, 62]
+          },
+          {
+            "id": "71.092",
+            "name": "Medium Olive",
+            "hex_val": "#4A5044",
+            "rgb_val": [74, 80, 68]
+          },
+          {
+            "id": "71.093",
+            "name": "NATO Green",
+            "hex_val": "#4D574F",
+            "rgb_val": [77, 87, 79]
+          },
+          {
+            "id": "71.094",
+            "name": "Green Zinc Chrom.",
+            "hex_val": "#505E3D",
+            "rgb_val": [80, 94, 61]
+          },
+          {
+            "id": "71.095",
+            "name": "Pale Green",
+            "hex_val": "#6B8059",
+            "rgb_val": [107, 128, 89]
+          },
+          {
+            "id": "71.096",
+            "name": "Olive Grey",
+            "hex_val": "#596358",
+            "rgb_val": [89, 99, 88]
+          },
+          {
+            "id": "71.097",
+            "name": "Med. Gunship Grey",
+            "hex_val": "#565F66",
+            "rgb_val": [86, 95, 102]
+          },
+          {
+            "id": "71.101",
+            "name": "Light Blue RLM78",
+            "hex_val": "#7A9294",
+            "rgb_val": [122, 146, 148]
+          },
+          {
+            "id": "71.102",
+            "name": "Red",
+            "hex_val": "#B0313C",
+            "rgb_val": [176, 49, 60]
+          },
+          {
+            "id": "71.103",
+            "name": "Grey Blue RLM84",
+            "hex_val": "#979E97",
+            "rgb_val": [151, 158, 151]
+          },
+          {
+            "id": "71.104",
+            "name": "Green RLM62",
+            "hex_val": "#575C46",
+            "rgb_val": [87, 92, 70]
+          },
+          {
+            "id": "71.105",
+            "name": "Brown RLM26",
+            "hex_val": "#80413A",
+            "rgb_val": [128, 65, 58]
+          },
+          {
+            "id": "71.106",
+            "name": "Ivory RLM05",
+            "hex_val": "#BDAF70",
+            "rgb_val": [189, 175, 112]
+          },
+          {
+            "id": "71.107",
+            "name": "US Interior Yellow",
+            "hex_val": "#C5A05C",
+            "rgb_val": [197, 160, 92]
+          },
+          {
+            "id": "71.108",
+            "name": "UK Azure Blue",
+            "hex_val": "#6D8AAC",
+            "rgb_val": [109, 138, 172]
+          },
+          {
+            "id": "71.109",
+            "name": "Faded P.R.U. Blue",
+            "hex_val": "#547179",
+            "rgb_val": [84, 113, 121]
+          },
+          {
+            "id": "71.110",
+            "name": "Dark Gray",
+            "hex_val": "#50585B",
+            "rgb_val": [80, 88, 91]
+          },
+          {
+            "id": "71.111",
+            "name": "USAF Light Blue",
+            "hex_val": "#526977",
+            "rgb_val": [82, 105, 119]
+          },
+          {
+            "id": "71.112",
+            "name": "Sand",
+            "hex_val": "#96837C",
+            "rgb_val": [150, 131, 124]
+          },
+          {
+            "id": "71.113",
+            "name": "IDF Blue",
+            "hex_val": "#527686",
+            "rgb_val": [82, 118, 134]
+          },
+          {
+            "id": "71.114",
+            "name": "Medium Gray",
+            "hex_val": "#687D82",
+            "rgb_val": [104, 125, 130]
+          },
+          {
+            "id": "71.115",
+            "name": "Blue Grey",
+            "hex_val": "#414A51",
+            "rgb_val": [65, 74, 81]
+          },
+          {
+            "id": "71.116",
+            "name": "Camou. Grey Green",
+            "hex_val": "#736751",
+            "rgb_val": [115, 103, 81]
+          },
+          {
+            "id": "71.117",
+            "name": "Camouflage Brown",
+            "hex_val": "#A98B71",
+            "rgb_val": [169, 139, 113]
+          },
+          {
+            "id": "71.118",
+            "name": "Camouflage Grey",
+            "hex_val": "#7E725A",
+            "rgb_val": [126, 114, 90]
+          },
+          {
+            "id": "71.119",
+            "name": "White Grey",
+            "hex_val": "#CFCFC3",
+            "rgb_val": [207, 207, 195]
+          },
+          {
+            "id": "71.120",
+            "name": "Dark Ghost Gray",
+            "hex_val": "#84929B",
+            "rgb_val": [132, 146, 155]
+          },
+          {
+            "id": "71.121",
+            "name": "Light Gull Gray",
+            "hex_val": "#9FA5A1",
+            "rgb_val": [159, 165, 161]
+          },
+          {
+            "id": "71.122",
+            "name": "US Desert Arm. 686",
+            "hex_val": "#A69581",
+            "rgb_val": [166, 149, 129]
+          },
+          {
+            "id": "71.123",
+            "name": "Dark Grey RLM42",
+            "hex_val": "#4E5156",
+            "rgb_val": [78, 81, 86]
+          },
+          {
+            "id": "71.124",
+            "name": "USAF Green",
+            "hex_val": "#4B5959",
+            "rgb_val": [75, 89, 89]
+          },
+          {
+            "id": "71.125",
+            "name": "USAF Brown",
+            "hex_val": "#846E60",
+            "rgb_val": [132, 110, 96]
+          },
+          {
+            "id": "71.126",
+            "name": "IDF/IAF Green",
+            "hex_val": "#718470",
+            "rgb_val": [113, 132, 112]
+          },
+          {
+            "id": "71.128",
+            "name": "Gray Violet",
+            "hex_val": "#616360",
+            "rgb_val": [97, 99, 96]
+          },
+          {
+            "id": "71.129",
+            "name": "Light Rust",
+            "hex_val": "#875D47",
+            "rgb_val": [135, 93, 71]
+          },
+          {
+            "id": "71.130",
+            "name": "Orange Rust",
+            "hex_val": "#C56A3B",
+            "rgb_val": [197, 106, 59]
+          },
+          {
+            "id": "71.131",
+            "name": "Concrete",
+            "hex_val": "#706C61",
+            "rgb_val": [112, 108, 97]
+          },
+          {
+            "id": "71.132",
+            "name": "Aged White",
+            "hex_val": "#DECBAB",
+            "rgb_val": [222, 203, 171]
+          },
+          {
+            "id": "71.133",
+            "name": "Dirt",
+            "hex_val": "#735F44",
+            "rgb_val": [115, 95, 68]
+          },
+          {
+            "id": "71.134",
+            "name": "IJA Midouri Green",
+            "hex_val": "#38483D",
+            "rgb_val": [56, 72, 61]
+          },
+          {
+            "id": "71.135",
+            "name": "IJA Chrome Yellow",
+            "hex_val": "#F6A61D",
+            "rgb_val": [246, 166, 29]
+          },
+          {
+            "id": "71.136",
+            "name": "IJA Earth Brown",
+            "hex_val": "#716151",
+            "rgb_val": [113, 97, 81]
+          },
+          {
+            "id": "71.137",
+            "name": "US Light Green",
+            "hex_val": "#626344",
+            "rgb_val": [98, 99, 68]
+          },
+          {
+            "id": "71.138",
+            "name": "US Sand",
+            "hex_val": "#8F856C",
+            "rgb_val": [143, 133, 108]
+          },
+          {
+            "id": "71.139",
+            "name": "US Field Drab",
+            "hex_val": "#645744",
+            "rgb_val": [100, 87, 68]
+          },
+          {
+            "id": "71.140",
+            "name": "US Desert Sand",
+            "hex_val": "#A18A7C",
+            "rgb_val": [161, 138, 124]
+          },
+          {
+            "id": "71.141",
+            "name": "IDF Sand Grey 73",
+            "hex_val": "#A29A85",
+            "rgb_val": [162, 154, 133]
+          },
+          {
+            "id": "71.142",
+            "name": "IDF Sinai Grey 82",
+            "hex_val": "#737165",
+            "rgb_val": [115, 113, 101]
+          },
+          {
+            "id": "71.143",
+            "name": "UK Light Stone",
+            "hex_val": "#AA976D",
+            "rgb_val": [170, 151, 109]
+          },
+          {
+            "id": "71.244",
+            "name": "Sand Beige",
+            "hex_val": "#AF9A7D",
+            "rgb_val": [175, 154, 125]
+          },
+          {
+            "id": "71.245",
+            "name": "Loam Beige",
+            "hex_val": "#8F8468",
+            "rgb_val": [143, 132, 104]
+          },
+          {
+            "id": "71.246",
+            "name": "Yellow Brown",
+            "hex_val": "#8D8169",
+            "rgb_val": [141, 129, 105]
+          },
+          {
+            "id": "71.247",
+            "name": "Light Olive",
+            "hex_val": "#62604B",
+            "rgb_val": [98, 96, 75]
+          },
+          {
+            "id": "71.248",
+            "name": "Brown Grey",
+            "hex_val": "#606058",
+            "rgb_val": [96, 96, 88]
+          },
+          {
+            "id": "71.249",
+            "name": "NATO Brown",
+            "hex_val": "#544B44",
+            "rgb_val": [84, 75, 68]
+          },
+          {
+            "id": "71.250",
+            "name": "Bronze Green",
+            "hex_val": "#4E544A",
+            "rgb_val": [78, 84, 74]
+          },
+          {
+            "id": "71.251",
+            "name": "NATO Black",
+            "hex_val": "#292C31",
+            "rgb_val": [41, 44, 49]
+          },
+          {
+            "id": "71.255",
+            "name": "Light Blue RLM65",
+            "hex_val": "#829B98",
+            "rgb_val": [130, 155, 152]
+          },
+          {
+            "id": "71.256",
+            "name": "Green RLM73",
+            "hex_val": "#404B47",
+            "rgb_val": [64, 75, 71]
+          },
+          {
+            "id": "71.257",
+            "name": "Light Blue RLM76",
+            "hex_val": "#8DA6A3",
+            "rgb_val": [141, 166, 163]
+          },
+          {
+            "id": "71.258",
+            "name": "Grey Green RLM74",
+            "hex_val": "#4D534F",
+            "rgb_val": [77, 83, 79]
+          },
+          {
+            "id": "71.259",
+            "name": "Grey Violet RLM75",
+            "hex_val": "#5E6265",
+            "rgb_val": [94, 98, 101]
+          },
+          {
+            "id": "71.260",
+            "name": "Light Grey RLM63",
+            "hex_val": "#656D62",
+            "rgb_val": [101, 109, 98]
+          },
+          {
+            "id": "71.263",
+            "name": "Green RLM72",
+            "hex_val": "#3E433F",
+            "rgb_val": [62, 67, 63]
+          },
+          {
+            "id": "71.264",
+            "name": "Brown Violet RLM81",
+            "hex_val": "#5E584C",
+            "rgb_val": [94, 88, 76]
+          },
+          {
+            "id": "71.265",
+            "name": "Olive Green RLM80",
+            "hex_val": "#424C41",
+            "rgb_val": [66, 76, 65]
+          },
+          {
+            "id": "71.266",
+            "name": "Dark Blue RLM24",
+            "hex_val": "#324A62",
+            "rgb_val": [50, 74, 98]
+          },
+          {
+            "id": "71.267",
+            "name": "Light Green RLM25",
+            "hex_val": "#47796E",
+            "rgb_val": [71, 121, 110]
+          },
+          {
+            "id": "71.268",
+            "name": "German Grey",
+            "hex_val": "#404642",
+            "rgb_val": [64, 70, 66]
+          },
+          {
+            "id": "71.269",
+            "name": "Red",
+            "hex_val": "#99403A",
+            "rgb_val": [153, 64, 58]
+          },
+          {
+            "id": "71.270",
+            "name": "Off-White",
+            "hex_val": "#DFD1B6",
+            "rgb_val": [223, 209, 182]
+          },
+          {
+            "id": "71.271",
+            "name": "German Red Brown",
+            "hex_val": "#5D3F37",
+            "rgb_val": [93, 63, 55]
+          },
+          {
+            "id": "71.272",
+            "name": "Ger. Yellow Brown",
+            "hex_val": "#7A6B4E",
+            "rgb_val": [122, 107, 78]
+          },
+          {
+            "id": "71.273",
+            "name": "Ocean Gray",
+            "hex_val": "#687480",
+            "rgb_val": [104, 116, 128]
+          },
+          {
+            "id": "71.274",
+            "name": "Aggressor Gray",
+            "hex_val": "#757A80",
+            "rgb_val": [117, 122, 128]
+          },
+          {
+            "id": "71.275",
+            "name": "USAF Medium Gray",
+            "hex_val": "#7D8288",
+            "rgb_val": [125, 130, 136]
+          },
+          {
+            "id": "71.276",
+            "name": "USAF Light Gray",
+            "hex_val": "#B6BCB8",
+            "rgb_val": [182, 188, 184]
+          },
+          {
+            "id": "71.277",
+            "name": "Dark Gull Gray",
+            "hex_val": "#7C8083",
+            "rgb_val": [124, 128, 131]
+          },
+          {
+            "id": "71.278",
+            "name": "Sand Yellow RLM79",
+            "hex_val": "#8D7254",
+            "rgb_val": [141, 114, 84]
+          },
+          {
+            "id": "71.279",
+            "name": "Insignia White",
+            "hex_val": "#DADCCE",
+            "rgb_val": [218, 220, 206]
+          },
+          {
+            "id": "71.280",
+            "name": "Camouflage Gray",
+            "hex_val": "#666A6B",
+            "rgb_val": [102, 106, 107]
+          },
+          {
+            "id": "71.281",
+            "name": "3B Russian Green",
+            "hex_val": "#414342",
+            "rgb_val": [65, 67, 66]
+          },
+          {
+            "id": "71.282",
+            "name": "6K Russian Brown",
+            "hex_val": "#45413E",
+            "rgb_val": [69, 65, 62]
+          },
+          {
+            "id": "71.283",
+            "name": "7K Russian Tan",
+            "hex_val": "#736E5B",
+            "rgb_val": [115, 110, 91]
+          },
+          {
+            "id": "71.284",
+            "name": "UK Light Mud",
+            "hex_val": "#7C7A6E",
+            "rgb_val": [124, 122, 110]
+          },
+          {
+            "id": "71.285",
+            "name": "IJA Dark Green",
+            "hex_val": "#4E5043",
+            "rgb_val": [78, 80, 67]
+          },
+          {
+            "id": "71.286",
+            "name": "IJA Olive Green",
+            "hex_val": "#484631",
+            "rgb_val": [72, 70, 49]
+          },
+          {
+            "id": "71.287",
+            "name": "IJA Khaki Brown",
+            "hex_val": "#645744",
+            "rgb_val": [100, 87, 68]
+          },
+          {
+            "id": "71.288",
+            "name": "UK BSC 64 Port. Stone",
+            "hex_val": "#C3B791",
+            "rgb_val": [195, 183, 145]
+          },
+          {
+            "id": "71.289",
+            "name": "US Dark Green",
+            "hex_val": "#525647",
+            "rgb_val": [82, 86, 71]
+          },
+          {
+            "id": "71.290",
+            "name": "US Earth Brown",
+            "hex_val": "#57504A",
+            "rgb_val": [87, 80, 74]
+          },
+          {
+            "id": "71.291",
+            "name": "US Earth Yellow",
+            "hex_val": "#B38C65",
+            "rgb_val": [179, 140, 101]
+          },
+          {
+            "id": "71.292",
+            "name": "US Loam",
+            "hex_val": "#4B504A",
+            "rgb_val": [75, 80, 74]
+          },
+          {
+            "id": "71.293",
+            "name": "US Earth Red",
+            "hex_val": "#745E51",
+            "rgb_val": [116, 94, 81]
+          },
+          {
+            "id": "71.294",
+            "name": "US Forest Green",
+            "hex_val": "#4D5047",
+            "rgb_val": [77, 80, 71]
+          },
+          {
+            "id": "71.295",
+            "name": "USN Sea Blue",
+            "hex_val": "#3C434B",
+            "rgb_val": [60, 67, 75]
+          },
+          {
+            "id": "71.296",
+            "name": "USAAF Light Gray",
+            "hex_val": "#B4B4A8",
+            "rgb_val": [180, 180, 168]
+          },
+          {
+            "id": "71.297",
+            "name": "JGSD Brown 3606",
+            "hex_val": "#605B55",
+            "rgb_val": [96, 91, 85]
+          },
+          {
+            "id": "71.298",
+            "name": "M495 Light Gray",
+            "hex_val": "#939486",
+            "rgb_val": [147, 148, 134]
+          },
+          {
+            "id": "71.299",
+            "name": "Intermediate Blue",
+            "hex_val": "#576872",
+            "rgb_val": [87, 104, 114]
+          },
+          {
+            "id": "71.300",
+            "name": "Glossy Sea Blue",
+            "hex_val": "#1C2932",
+            "rgb_val": [28, 41, 50]
+          },
+          {
+            "id": "71.301",
+            "name": "AMT-4 Cam. Green",
+            "hex_val": "#5F5B42",
+            "rgb_val": [95, 91, 66]
+          },
+          {
+            "id": "71.302",
+            "name": "Sky Type S",
+            "hex_val": "#989F8F",
+            "rgb_val": [152, 159, 143]
+          },
+          {
+            "id": "71.303",
+            "name": "A-24M Camo. Green",
+            "hex_val": "#525647",
+            "rgb_val": [82, 86, 71]
+          },
+          {
+            "id": "71.304",
+            "name": "AMT-11 Blue Grey",
+            "hex_val": "#565F66",
+            "rgb_val": [86, 95, 102]
+          },
+          {
+            "id": "71.305",
+            "name": "Interior Grey Green",
+            "hex_val": "#8D9E8C",
+            "rgb_val": [141, 158, 140]
+          },
+          {
+            "id": "71.306",
+            "name": "Sky Blue",
+            "hex_val": "#BED2D3",
+            "rgb_val": [190, 210, 211]
+          },
+          {
+            "id": "71.307",
+            "name": "BS Med. Sea Grey",
+            "hex_val": "#7D888A",
+            "rgb_val": [125, 136, 138]
+          },
+          {
+            "id": "71.308",
+            "name": "AMT-12 Dark Grey",
+            "hex_val": "#3F464E",
+            "rgb_val": [63, 70, 78]
+          },
+          {
+            "id": "71.309",
+            "name": "Dark Slate Grey",
+            "hex_val": "#4E5243",
+            "rgb_val": [78, 82, 67]
+          },
+          {
+            "id": "71.310",
+            "name": "IJN Deep Dark Green",
+            "hex_val": "#2E4C4C",
+            "rgb_val": [46, 76, 76]
+          },
+          {
+            "id": "71.311",
+            "name": "IJN Ash Grey",
+            "hex_val": "#807D6C",
+            "rgb_val": [128, 125, 108]
+          },
+          {
+            "id": "71.312",
+            "name": "IJN Medium Grey",
+            "hex_val": "#94948A",
+            "rgb_val": [148, 148, 138]
+          },
+          {
+            "id": "71.313",
+            "name": "Dk Mediterr. Blue",
+            "hex_val": "#1E384F",
+            "rgb_val": [30, 56, 79]
+          },
+          {
+            "id": "71.314",
+            "name": "Seaplane Gray",
+            "hex_val": "#515556",
+            "rgb_val": [81, 85, 86]
+          },
+          {
+            "id": "71.315",
+            "name": "Tire Black",
+            "hex_val": "#3E4442",
+            "rgb_val": [62, 68, 66]
+          },
+          {
+            "id": "71.316",
+            "name": "N. 41 Dk Olive Drab",
+            "hex_val": "#484631",
+            "rgb_val": [72, 70, 49]
+          },
+          {
+            "id": "71.317",
+            "name": "All SV. Gol Lt Blue",
+            "hex_val": "#68C5D6",
+            "rgb_val": [104, 197, 214]
+          },
+          {
+            "id": "71.318",
+            "name": "AMT-7 Greyish Blue",
+            "hex_val": "#608A9A",
+            "rgb_val": [96, 138, 154]
+          },
+          {
+            "id": "71.319",
+            "name": "A-28M Greyish Blue",
+            "hex_val": "#6B9E97",
+            "rgb_val": [107, 158, 151]
+          },
+          {
+            "id": "71.320",
+            "name": "AMT-1 Lt. Grey. Brown",
+            "hex_val": "#8E887C",
+            "rgb_val": [142, 136, 124]
+          },
+          {
+            "id": "71.321",
+            "name": "IJA Light Grey Green",
+            "hex_val": "#9BA695",
+            "rgb_val": [155, 166, 149]
+          },
+          {
+            "id": "71.322",
+            "name": "IJN Black Green",
+            "hex_val": "#38483D",
+            "rgb_val": [56, 72, 61]
+          },
+          {
+            "id": "71.323",
+            "name": "BS Dark Earth",
+            "hex_val": "#675845",
+            "rgb_val": [103, 88, 69]
+          },
+          {
+            "id": "71.324",
+            "name": "BS Dark Green",
+            "hex_val": "#3F4334",
+            "rgb_val": [63, 67, 52]
+          },
+          {
+            "id": "71.325",
+            "name": "IJN Dk Black Green",
+            "hex_val": "#3E4442",
+            "rgb_val": [62, 68, 66]
+          },
+          {
+            "id": "71.326",
+            "name": "IJA Grey Green",
+            "hex_val": "#B3AE98",
+            "rgb_val": [179, 174, 152]
+          },
+          {
+            "id": "71.327",
+            "name": "IAF Sand",
+            "hex_val": "#B0A593",
+            "rgb_val": [176, 165, 147]
+          },
+          {
+            "id": "71.328",
+            "name": "Light Blue",
+            "hex_val": "#B8C4B8",
+            "rgb_val": [184, 196, 184]
+          },
+          {
+            "id": "71.329",
+            "name": "Green",
+            "hex_val": "#646F67",
+            "rgb_val": [100, 111, 103]
+          },
+          {
+            "id": "71.330",
+            "name": "Khaki Green Num. 3",
+            "hex_val": "#554E46",
+            "rgb_val": [85, 78, 70]
+          },
+          {
+            "id": "71.331",
+            "name": "Cockpit E.G.\"Faded\"",
+            "hex_val": "#419A88",
+            "rgb_val": [65, 154, 136]
+          },
+          {
+            "id": "71.332",
+            "name": "Unders. Blue \"Faded\"",
+            "hex_val": "#77A7BD",
+            "rgb_val": [119, 167, 189]
+          },
+          {
+            "id": "71.333",
+            "name": "Russian AF Blue",
+            "hex_val": "#1692B6",
+            "rgb_val": [22, 146, 182]
+          },
+          {
+            "id": "71.334",
+            "name": "Flanker Light Blue",
+            "hex_val": "#A3C2BD",
+            "rgb_val": [163, 194, 189]
+          },
+          {
+            "id": "71.335",
+            "name": "Flanker Light Gray",
+            "hex_val": "#8FA09A",
+            "rgb_val": [143, 160, 154]
+          },
+          {
+            "id": "71.336",
+            "name": "A-14 Steel Grey",
+            "hex_val": "#616B6A",
+            "rgb_val": [97, 107, 106]
+          },
+          {
+            "id": "71.337",
+            "name": "Flanker Blue",
+            "hex_val": "#86A8B2",
+            "rgb_val": [134, 168, 178]
+          },
+          {
+            "id": "71.338",
+            "name": "Russ. AF Grey Blue",
+            "hex_val": "#95A5A4",
+            "rgb_val": [149, 165, 164]
+          },
+          {
+            "id": "71.339",
+            "name": "Russian AF Grey N.3",
+            "hex_val": "#7D8788",
+            "rgb_val": [125, 135, 136]
+          },
+          {
+            "id": "71.340",
+            "name": "Grey Green",
+            "hex_val": "#6D7872",
+            "rgb_val": [109, 120, 114]
+          },
+          {
+            "id": "71.341",
+            "name": "Green Grey",
+            "hex_val": "#506055",
+            "rgb_val": [80, 96, 85]
+          },
+          {
+            "id": "71.342",
+            "name": "Russ. AF Light Blue",
+            "hex_val": "#9DC4BF",
+            "rgb_val": [157, 196, 191]
+          },
+          {
+            "id": "71.343",
+            "name": "Russian AF Grey N.7",
+            "hex_val": "#6794A9",
+            "rgb_val": [103, 148, 169]
+          },
+          {
+            "id": "71.344",
+            "name": "Rus. AF Grey Prot. Coat",
+            "hex_val": "#A4C6CF",
+            "rgb_val": [164, 198, 207]
+          },
+          {
+            "id": "71.345",
+            "name": "Russ. AF Grey N.8",
+            "hex_val": "#93ADBA",
+            "rgb_val": [147, 173, 186]
+          },
+          {
+            "id": "71.346",
+            "name": "Russian AF Grey N.4",
+            "hex_val": "#A0A18F",
+            "rgb_val": [160, 161, 143]
+          },
+          {
+            "id": "71.347",
+            "name": "Russ. AF Dark Green",
+            "hex_val": "#434436",
+            "rgb_val": [67, 68, 54]
+          },
+          {
+            "id": "71.348",
+            "name": "USAF Tan",
+            "hex_val": "#B78F6B",
+            "rgb_val": [183, 143, 107]
+          }
+        ]
+      },
+      "GAME COLOR": {
+        "product_img": "https://res.cloudinary.com/giw7o6dl/image/upload/v1783183613/game-color_p7xcbe.webp",
+        "colors": [
+          {
+            "id": "72.001",
+            "name": "Dead White",
+            "hex_val": "#FFFFFF",
+            "rgb_val": [255, 255, 255]
+          },
+          {
+            "id": "72.003",
+            "name": "Pale Flesh",
+            "hex_val": "#C8967B",
+            "rgb_val": [200, 150, 123]
+          },
+          {
+            "id": "72.004",
+            "name": "Elf Skin Tone",
+            "hex_val": "#BD7C56",
+            "rgb_val": [189, 124, 86]
+          },
+          {
+            "id": "72.005",
+            "name": "Moon Yellow",
+            "hex_val": "#FFF200",
+            "rgb_val": [255, 242, 0]
+          },
+          {
+            "id": "72.006",
+            "name": "Sun Yellow",
+            "hex_val": "#FFC800",
+            "rgb_val": [255, 200, 0]
+          },
+          {
+            "id": "72.007",
+            "name": "Gold Yellow",
+            "hex_val": "#FAA51A",
+            "rgb_val": [250, 165, 26]
+          },
+          {
+            "id": "72.008",
+            "name": "Orange Fire",
+            "hex_val": "#F15A24",
+            "rgb_val": [241, 90, 36]
+          },
+          {
+            "id": "72.009",
+            "name": "Hot Orange",
+            "hex_val": "#EE2A24",
+            "rgb_val": [238, 42, 36]
+          },
+          {
+            "id": "72.010",
+            "name": "Bloody Red",
+            "hex_val": "#BE1E2D",
+            "rgb_val": [190, 30, 45]
+          },
+          {
+            "id": "72.011",
+            "name": "Gory Red",
+            "hex_val": "#7A1E21",
+            "rgb_val": [122, 30, 33]
+          },
+          {
+            "id": "72.012",
+            "name": "Scarlet Red",
+            "hex_val": "#9E1F24",
+            "rgb_val": [158, 31, 36]
+          },
+          {
+            "id": "72.013",
+            "name": "Squid Pink",
+            "hex_val": "#E463A4",
+            "rgb_val": [228, 99, 164]
+          },
+          {
+            "id": "72.014",
+            "name": "Warlord Purple",
+            "hex_val": "#BD208F",
+            "rgb_val": [189, 32, 143]
+          },
+          {
+            "id": "72.015",
+            "name": "Hexed Lichen",
+            "hex_val": "#452571",
+            "rgb_val": [69, 37, 113]
+          },
+          {
+            "id": "72.016",
+            "name": "Royal Purple",
+            "hex_val": "#2E2762",
+            "rgb_val": [46, 39, 98]
+          },
+          {
+            "id": "72.019",
+            "name": "Night Blue",
+            "hex_val": "#0D2C54",
+            "rgb_val": [13, 44, 84]
+          },
+          {
+            "id": "72.020",
+            "name": "Imperial Blue",
+            "hex_val": "#1B365D",
+            "rgb_val": [27, 54, 93]
+          },
+          {
+            "id": "72.021",
+            "name": "Magic Blue",
+            "hex_val": "#0072BC",
+            "rgb_val": [0, 114, 188]
+          },
+          {
+            "id": "72.022",
+            "name": "Ultramarine Blue",
+            "hex_val": "#0054A6",
+            "rgb_val": [0, 84, 166]
+          },
+          {
+            "id": "72.023",
+            "name": "Electric Blue",
+            "hex_val": "#00AEEF",
+            "rgb_val": [0, 174, 239]
+          },
+          {
+            "id": "72.024",
+            "name": "Turquoise",
+            "hex_val": "#008375",
+            "rgb_val": [0, 131, 117]
+          },
+          {
+            "id": "72.025",
+            "name": "Foul Green",
+            "hex_val": "#00A79D",
+            "rgb_val": [0, 167, 157]
+          },
+          {
+            "id": "72.026",
+            "name": "Jade Green",
+            "hex_val": "#00725B",
+            "rgb_val": [0, 114, 91]
+          },
+          {
+            "id": "72.027",
+            "name": "Scurvy Green",
+            "hex_val": "#004B49",
+            "rgb_val": [0, 75, 73]
+          },
+          {
+            "id": "72.028",
+            "name": "Dark Green",
+            "hex_val": "#003319",
+            "rgb_val": [0, 51, 25]
+          },
+          {
+            "id": "72.029",
+            "name": "Sick Green",
+            "hex_val": "#006837",
+            "rgb_val": [0, 104, 55]
+          },
+          {
+            "id": "72.030",
+            "name": "Goblin Green",
+            "hex_val": "#009245",
+            "rgb_val": [0, 146, 69]
+          },
+          {
+            "id": "72.031",
+            "name": "Camouflage Green",
+            "hex_val": "#71815A",
+            "rgb_val": [113, 129, 90]
+          },
+          {
+            "id": "72.032",
+            "name": "Scorpy Green",
+            "hex_val": "#39B54A",
+            "rgb_val": [57, 181, 74]
+          },
+          {
+            "id": "72.034",
+            "name": "Bone White",
+            "hex_val": "#CCC3A2",
+            "rgb_val": [204, 195, 162]
+          },
+          {
+            "id": "72.035",
+            "name": "Dead Flesh",
+            "hex_val": "#A3C096",
+            "rgb_val": [163, 192, 150]
+          },
+          {
+            "id": "72.036",
+            "name": "Bronze Brown",
+            "hex_val": "#A35628",
+            "rgb_val": [163, 86, 40]
+          },
+          {
+            "id": "72.038",
+            "name": "Scrofulous Brown",
+            "hex_val": "#D38E27",
+            "rgb_val": [211, 142, 39]
+          },
+          {
+            "id": "72.039",
+            "name": "Plague Brown",
+            "hex_val": "#C67A2A",
+            "rgb_val": [198, 122, 42]
+          },
+          {
+            "id": "72.040",
+            "name": "Leather Brown",
+            "hex_val": "#854124",
+            "rgb_val": [133, 65, 36]
+          },
+          {
+            "id": "72.042",
+            "name": "Parasite Brown",
+            "hex_val": "#C25225",
+            "rgb_val": [194, 82, 37]
+          },
+          {
+            "id": "72.043",
+            "name": "Beasty Brown",
+            "hex_val": "#613318",
+            "rgb_val": [97, 51, 24]
+          },
+          {
+            "id": "72.044",
+            "name": "Dark Flesh Tone",
+            "hex_val": "#663B2A",
+            "rgb_val": [102, 59, 42]
+          },
+          {
+            "id": "72.045",
+            "name": "Charred Brown",
+            "hex_val": "#3D251D",
+            "rgb_val": [61, 37, 29]
+          },
+          {
+            "id": "72.047",
+            "name": "Wolf Grey",
+            "hex_val": "#A3B8CC",
+            "rgb_val": [163, 184, 204]
+          },
+          {
+            "id": "72.048",
+            "name": "Sombre Grey",
+            "hex_val": "#47596B",
+            "rgb_val": [71, 89, 107]
+          },
+          {
+            "id": "72.049",
+            "name": "Stonewall Grey",
+            "hex_val": "#999999",
+            "rgb_val": [153, 153, 153]
+          },
+          {
+            "id": "72.050",
+            "name": "Neutral Grey",
+            "hex_val": "#595959",
+            "rgb_val": [89, 89, 89]
+          },
+          {
+            "id": "72.051",
+            "name": "Black",
+            "hex_val": "#1A1A1A",
+            "rgb_val": [26, 26, 26]
+          },
+          {
+            "id": "72.061",
+            "name": "Khaki",
+            "hex_val": "#9B9470",
+            "rgb_val": [155, 148, 112]
+          },
+          {
+            "id": "72.062",
+            "name": "Earth",
+            "hex_val": "#84613D",
+            "rgb_val": [132, 97, 61]
+          },
+          {
+            "id": "72.063",
+            "name": "Desert Yellow",
+            "hex_val": "#A67C43",
+            "rgb_val": [166, 124, 67]
+          },
+          {
+            "id": "72.066",
+            "name": "Tan",
+            "hex_val": "#8C5843",
+            "rgb_val": [140, 88, 67]
+          },
+          {
+            "id": "72.067",
+            "name": "Cayman Green",
+            "hex_val": "#42513B",
+            "rgb_val": [66, 81, 59]
+          },
+          {
+            "id": "72.071",
+            "name": "Barbarian Skin",
+            "hex_val": "#B66C44",
+            "rgb_val": [182, 108, 68]
+          },
+          {
+            "id": "72.076",
+            "name": "Alien Purple",
+            "hex_val": "#5C2475",
+            "rgb_val": [92, 36, 117]
+          },
+          {
+            "id": "72.095",
+            "name": "Glacier Blue",
+            "hex_val": "#A3C6D8",
+            "rgb_val": [163, 198, 216]
+          },
+          {
+            "id": "72.096",
+            "name": "Verdigris",
+            "hex_val": "#7ECEC1",
+            "rgb_val": [126, 206, 193]
+          },
+          {
+            "id": "72.098",
+            "name": "Elfic Flesh",
+            "hex_val": "#EDCF9D",
+            "rgb_val": [237, 207, 157]
+          },
+          {
+            "id": "72.099",
+            "name": "Skin Tone",
+            "hex_val": "#F8AB7D",
+            "rgb_val": [248, 171, 125]
+          },
+          {
+            "id": "72.100",
+            "name": "Rosy Flesh",
+            "hex_val": "#E37566",
+            "rgb_val": [227, 117, 102]
+          },
+          {
+            "id": "72.101",
+            "name": "Off-White",
+            "hex_val": "#FCEEB1",
+            "rgb_val": [252, 238, 177]
+          },
+          {
+            "id": "72.102",
+            "name": "Steel Grey",
+            "hex_val": "#668299",
+            "rgb_val": [102, 130, 153]
+          },
+          {
+            "id": "72.106",
+            "name": "Scarlet Blood",
+            "hex_val": "#D61A21",
+            "rgb_val": [214, 26, 33]
+          },
+          {
+            "id": "72.107",
+            "name": "Athena Skin",
+            "hex_val": "#AB6357",
+            "rgb_val": [171, 99, 87]
+          },
+          {
+            "id": "72.108",
+            "name": "Succubus Skin",
+            "hex_val": "#714542",
+            "rgb_val": [113, 69, 66]
+          },
+          {
+            "id": "72.109",
+            "name": "Toxic Yellow",
+            "hex_val": "#EAE500",
+            "rgb_val": [234, 229, 0]
+          },
+          {
+            "id": "72.110",
+            "name": "Sunset Orange",
+            "hex_val": "#F47A20",
+            "rgb_val": [244, 122, 32]
+          },
+          {
+            "id": "72.111",
+            "name": "Nocturnal Red",
+            "hex_val": "#471317",
+            "rgb_val": [71, 19, 23]
+          },
+          {
+            "id": "72.112",
+            "name": "Evil Red",
+            "hex_val": "#591623",
+            "rgb_val": [89, 22, 35]
+          },
+          {
+            "id": "72.113",
+            "name": "Deep Magenta",
+            "hex_val": "#9E1668",
+            "rgb_val": [158, 22, 104]
+          },
+          {
+            "id": "72.114",
+            "name": "Lustful Purple",
+            "hex_val": "#75235E",
+            "rgb_val": [117, 35, 94]
+          },
+          {
+            "id": "72.115",
+            "name": "Grunge Brown",
+            "hex_val": "#4A2312",
+            "rgb_val": [74, 35, 18]
+          },
+          {
+            "id": "72.116",
+            "name": "Midnight Purple",
+            "hex_val": "#1E1A3D",
+            "rgb_val": [30, 26, 61]
+          },
+          {
+            "id": "72.117",
+            "name": "Elfic Blue",
+            "hex_val": "#9CCBE8",
+            "rgb_val": [156, 203, 232]
+          },
+          {
+            "id": "72.118",
+            "name": "Sunrise Blue",
+            "hex_val": "#2BB673",
+            "rgb_val": [43, 182, 115]
+          },
+          {
+            "id": "72.119",
+            "name": "Aquamarine",
+            "hex_val": "#00A99D",
+            "rgb_val": [0, 169, 157]
+          },
+          {
+            "id": "72.120",
+            "name": "Abyssal Turquoise",
+            "hex_val": "#00484A",
+            "rgb_val": [0, 72, 74]
+          },
+          {
+            "id": "72.121",
+            "name": "Ghost Green",
+            "hex_val": "#C2E5D3",
+            "rgb_val": [194, 229, 211]
+          },
+          {
+            "id": "72.122",
+            "name": "Bile Green",
+            "hex_val": "#8DC63F",
+            "rgb_val": [141, 198, 63]
+          },
+          {
+            "id": "72.123",
+            "name": "Angel Green",
+            "hex_val": "#00401A",
+            "rgb_val": [0, 64, 26]
+          },
+          {
+            "id": "72.124",
+            "name": "Gorgon Brown",
+            "hex_val": "#594236",
+            "rgb_val": [89, 66, 54]
+          },
+          {
+            "id": "72.145",
+            "name": "Dirty Grey",
+            "hex_val": "#515942",
+            "rgb_val": [81, 89, 66]
+          },
+          {
+            "id": "72.148",
+            "name": "Warm Grey",
+            "hex_val": "#828275",
+            "rgb_val": [130, 130, 117]
+          },
+          {
+            "id": "72.155",
+            "name": "Charcoal",
+            "hex_val": "#333333",
+            "rgb_val": [51, 51, 51]
+          }
+        ]
+      }
+    }
+  }
+}
